@@ -32,5 +32,9 @@
 }
 
 - (IBAction)downloadBtnClicked:(id)sender {
+    NSLog(@"downlaod btn clicked");
+    if (self.downloadCb!=nil) {
+        self.downloadCb(self);
+    }
 }
 @end

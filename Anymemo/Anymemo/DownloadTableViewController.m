@@ -56,7 +56,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DownloadCell" forIndexPath:indexPath];
-    
     cell.textLabel.text=self.categories[indexPath.row];
     
     return cell;
@@ -65,12 +64,15 @@
     if ([segue.identifier isEqualToString:@"downloaddetail"]) {
         DownloadDetailTableViewController* destinagion=[segue destinationViewController];
         destinagion.memos=self.self.allItems[self.selectCategory];
-        
     }
 }
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     self.selectCategory=self.categories[indexPath.row];
-    NSLog(@"%@",self.self.allItems[self.selectCategory]);
+    return indexPath;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    NSLog(@"%@",self.selectCategory);
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 /*

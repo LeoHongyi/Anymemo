@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class DownloadCell;
+
+typedef void(^onDownloadCellClickedCb)(DownloadCell *cell);
+
 @interface DownloadCell : UITableViewCell
+@property (nonatomic,strong)NSDictionary* memo;
+@property (nonatomic,strong)onDownloadCellClickedCb downloadCb;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descLabel;
 @property (weak, nonatomic) IBOutlet UIButton *downloadBtn;
