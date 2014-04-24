@@ -1,0 +1,55 @@
+{
+    "Geography": [
+        {
+            "Name": "Countries Capitals Flags Oceans of the world", 
+            "Author": "tokillthesound AT hotmail DOT com", 
+            "Url": "http://anymemo.org/pages/download.php?filename=Countries_Capitals_Flags_Oceans_of_the_world.anki.txt.zip&wordlistname=DatabasesTable"
+        }, 
+        {
+            "Name": "Countries of the World anki 1", 
+            "Author": "jacob.unna AT gmail DOT com", 
+            "Url": "http://anymemo.org/pages/download.php?filename=Countries_of_the_World.anki.txt_1.zip&wordlistname=DatabasesTable"
+        }, 
+        {
+            "Name": "Countries of the World anki 2", 
+            "Author": "acob.unna AT gmail DOT com", 
+            "Url": "http://anymemo.org/pages/download.php?filename=Countries_of_the_World.anki.txt_2.zip&wordlistname=DatabasesTable"
+        }
+    ], 
+    "History": [
+        {
+            "Name": "Chinese history & culture", 
+            "Author": "gwern", 
+            "Url": "http://anymemo.org/pages/download.php?filename=china-history.xml.db&wordlistname=DatabasesTable"
+        }, 
+        {
+            "Name": "Chinese history & culture inverse", 
+            "Author": "gwern", 
+            "Url": "http://anymemo.org/pages/download.php?filename=china-history.xml_inv.db&wordlistname=DatabasesTable"
+        }
+    ], 
+    "Humanities": [
+        {
+            "Name": "Counseling510-Theories and Practice of Psychotherapy", 
+            "Author": "provodnik", 
+            "Url": "http://anymemo.org/pages/download.php?filename=COUN510.xml.db&wordlistname=DatabasesTable"
+        }, 
+        {
+            "Name": "Literary & Film Techniques", 
+            "Author": "Joshua Stackhouse", 
+            "Url": "http://anymemo.org/pages/download.php?filename=Literary_&_Film_Techniques.xml.db&wordlistname=DatabasesTable"
+        }, 
+        {
+            "Name": "Literary & Film Techniques Inverse", 
+            "Author": "Joshua Stackhouse", 
+            "Url": "http://anymemo.org/pages/download.php?filename=Literary_&_Film_Techniques.xml_inv.db&wordlistname=DatabasesTable"
+        }
+    ], 
+    "Languages - Arabic": [
+        {
+            "Name": "2000 Arabic-English sentences", 
+            "Author": "saeb2saeb At hotmail DOT com", 
+            "Url": "http://anymemo.org/pages/download.php?filename=2000_Arabic-English_sentences.anki.txt.db&wordlistname=DatabasesTable"
+        }
+    ]
+}

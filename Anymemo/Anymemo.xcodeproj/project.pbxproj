@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0490794A19056444004874C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490794919056444004874C8 /* Foundation.framework */; };
+		0490794C19056444004874C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490794B19056444004874C8 /* CoreGraphics.framework */; };
+		0490794E19056444004874C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490794D19056444004874C8 /* UIKit.framework */; };
+		0490795419056444004874C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0490795219056444004874C8 /* InfoPlist.strings */; };
+		0490795619056444004874C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490795519056444004874C8 /* main.m */; };
+		0490795A19056444004874C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490795919056444004874C8 /* AppDelegate.m */; };
+		0490795D19056445004874C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0490795B19056445004874C8 /* Main.storyboard */; };
+		0490796219056445004874C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0490796119056445004874C8 /* Images.xcassets */; };
+		0490796919056445004874C8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490796819056445004874C8 /* XCTest.framework */; };
+		0490796A19056445004874C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490794919056444004874C8 /* Foundation.framework */; };
+		0490796B19056445004874C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490794D19056444004874C8 /* UIKit.framework */; };
+		0490797319056445004874C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0490797119056445004874C8 /* InfoPlist.strings */; };
+		0490797519056445004874C8 /* AnymemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490797419056445004874C8 /* AnymemoTests.m */; };
+		0490798719056691004874C8 /* download.png in Resources */ = {isa = PBXBuildFile; fileRef = 0490797F19056691004874C8 /* download.png */; };
+		0490798819056691004874C8 /* download@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0490798019056691004874C8 /* download@2x.png */; };
+		0490798919056691004874C8 /* open.png in Resources */ = {isa = PBXBuildFile; fileRef = 0490798119056691004874C8 /* open.png */; };
+		0490798A19056691004874C8 /* open@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0490798219056691004874C8 /* open@2x.png */; };
+		0490798B19056691004874C8 /* resent.png in Resources */ = {isa = PBXBuildFile; fileRef = 0490798319056691004874C8 /* resent.png */; };
+		0490798C19056691004874C8 /* resent@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0490798419056691004874C8 /* resent@2x.png */; };
+		0490798D19056691004874C8 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 0490798519056691004874C8 /* settings.png */; };
+		0490798E19056691004874C8 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0490798619056691004874C8 /* settings@2x.png */; };
+		0490799119056730004874C8 /* DownloadTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490799019056730004874C8 /* DownloadTableViewController.m */; };
+		04907994190567D7004874C8 /* DownloadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04907993190567D7004874C8 /* DownloadCell.m */; };
+		0490799619056897004874C8 /* all_items.json in Resources */ = {isa = PBXBuildFile; fileRef = 0490799519056897004874C8 /* all_items.json */; };
+		0490799919056ABC004874C8 /* DownloadDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0490799819056ABC004874C8 /* DownloadDetailTableViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0490796C19056445004874C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0490793E19056444004874C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0490794519056444004874C8;
+			remoteInfo = Anymemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0490794619056444004874C8 /* Anymemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anymemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0490794919056444004874C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0490794B19056444004874C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0490794D19056444004874C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0490795119056444004874C8 /* Anymemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Anymemo-Info.plist"; sourceTree = "<group>"; };
+		0490795319056444004874C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0490795519056444004874C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0490795719056444004874C8 /* Anymemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Anymemo-Prefix.pch"; sourceTree = "<group>"; };
+		0490795819056444004874C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0490795919056444004874C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0490795C19056445004874C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0490796119056445004874C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0490796719056445004874C8 /* AnymemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnymemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0490796819056445004874C8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		0490797019056445004874C8 /* AnymemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AnymemoTests-Info.plist"; sourceTree = "<group>"; };
+		0490797219056445004874C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0490797419056445004874C8 /* AnymemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnymemoTests.m; sourceTree = "<group>"; };
+		0490797F19056691004874C8 /* download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = download.png; sourceTree = "<group>"; };
+		0490798019056691004874C8 /* download@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "download@2x.png"; sourceTree = "<group>"; };
+		0490798119056691004874C8 /* open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = open.png; sourceTree = "<group>"; };
+		0490798219056691004874C8 /* open@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "open@2x.png"; sourceTree = "<group>"; };
+		0490798319056691004874C8 /* resent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resent.png; sourceTree = "<group>"; };
+		0490798419056691004874C8 /* resent@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "resent@2x.png"; sourceTree = "<group>"; };
+		0490798519056691004874C8 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		0490798619056691004874C8 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
+		0490798F19056730004874C8 /* DownloadTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadTableViewController.h; sourceTree = "<group>"; };
+		0490799019056730004874C8 /* DownloadTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadTableViewController.m; sourceTree = "<group>"; };
+		04907992190567D7004874C8 /* DownloadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadCell.h; sourceTree = "<group>"; };
+		04907993190567D7004874C8 /* DownloadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadCell.m; sourceTree = "<group>"; };
+		0490799519056897004874C8 /* all_items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = all_items.json; sourceTree = "<group>"; };
+		0490799719056ABC004874C8 /* DownloadDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadDetailTableViewController.h; sourceTree = "<group>"; };
+		0490799819056ABC004874C8 /* DownloadDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadDetailTableViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0490794319056444004874C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0490794C19056444004874C8 /* CoreGraphics.framework in Frameworks */,
+				0490794E19056444004874C8 /* UIKit.framework in Frameworks */,
+				0490794A19056444004874C8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0490796419056445004874C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0490796919056445004874C8 /* XCTest.framework in Frameworks */,
+				0490796B19056445004874C8 /* UIKit.framework in Frameworks */,
+				0490796A19056445004874C8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0490793D19056444004874C8 = {
+			isa = PBXGroup;
+			children = (
+				0490794F19056444004874C8 /* Anymemo */,
+				0490796E19056445004874C8 /* AnymemoTests */,
+				0490794819056444004874C8 /* Frameworks */,
+				0490794719056444004874C8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0490794719056444004874C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0490794619056444004874C8 /* Anymemo.app */,
+				0490796719056445004874C8 /* AnymemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0490794819056444004874C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0490794919056444004874C8 /* Foundation.framework */,
+				0490794B19056444004874C8 /* CoreGraphics.framework */,
+				0490794D19056444004874C8 /* UIKit.framework */,
+				0490796819056445004874C8 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0490794F19056444004874C8 /* Anymemo */ = {
+			isa = PBXGroup;
+			children = (
+				0490799519056897004874C8 /* all_items.json */,
+				0490799719056ABC004874C8 /* DownloadDetailTableViewController.h */,
+				0490799819056ABC004874C8 /* DownloadDetailTableViewController.m */,
+				0490798F19056730004874C8 /* DownloadTableViewController.h */,
+				0490799019056730004874C8 /* DownloadTableViewController.m */,
+				0490795819056444004874C8 /* AppDelegate.h */,
+				0490795919056444004874C8 /* AppDelegate.m */,
+				0490795B19056445004874C8 /* Main.storyboard */,
+				04907992190567D7004874C8 /* DownloadCell.h */,
+				04907993190567D7004874C8 /* DownloadCell.m */,
+				0490796119056445004874C8 /* Images.xcassets */,
+				0490795019056444004874C8 /* Supporting Files */,
+			);
+			path = Anymemo;
+			sourceTree = "<group>";
+		};
+		0490795019056444004874C8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0490797E19056691004874C8 /* Resources */,
+				0490795119056444004874C8 /* Anymemo-Info.plist */,
+				0490795219056444004874C8 /* InfoPlist.strings */,
+				0490795519056444004874C8 /* main.m */,
+				0490795719056444004874C8 /* Anymemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0490796E19056445004874C8 /* AnymemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				0490797419056445004874C8 /* AnymemoTests.m */,
+				0490796F19056445004874C8 /* Supporting Files */,
+			);
+			path = AnymemoTests;
+			sourceTree = "<group>";
+		};
+		0490796F19056445004874C8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0490797019056445004874C8 /* AnymemoTests-Info.plist */,
+				0490797119056445004874C8 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0490797E19056691004874C8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0490797F19056691004874C8 /* download.png */,
+				0490798019056691004874C8 /* download@2x.png */,
+				0490798119056691004874C8 /* open.png */,
+				0490798219056691004874C8 /* open@2x.png */,
+				0490798319056691004874C8 /* resent.png */,
+				0490798419056691004874C8 /* resent@2x.png */,
+				0490798519056691004874C8 /* settings.png */,
+				0490798619056691004874C8 /* settings@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0490794519056444004874C8 /* Anymemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0490797819056445004874C8 /* Build configuration list for PBXNativeTarget "Anymemo" */;
+			buildPhases = (
+				0490794219056444004874C8 /* Sources */,
+				0490794319056444004874C8 /* Frameworks */,
+				0490794419056444004874C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Anymemo;
+			productName = Anymemo;
+			productReference = 0490794619056444004874C8 /* Anymemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0490796619056445004874C8 /* AnymemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0490797B19056445004874C8 /* Build configuration list for PBXNativeTarget "AnymemoTests" */;
+			buildPhases = (
+				0490796319056445004874C8 /* Sources */,
+				0490796419056445004874C8 /* Frameworks */,
+				0490796519056445004874C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0490796D19056445004874C8 /* PBXTargetDependency */,
+			);
+			name = AnymemoTests;
+			productName = AnymemoTests;
+			productReference = 0490796719056445004874C8 /* AnymemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0490793E19056444004874C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = skysent;
+				TargetAttributes = {
+					0490796619056445004874C8 = {
+						TestTargetID = 0490794519056444004874C8;
+					};
+				};
+			};
+			buildConfigurationList = 0490794119056444004874C8 /* Build configuration list for PBXProject "Anymemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0490793D19056444004874C8;
+			productRefGroup = 0490794719056444004874C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0490794519056444004874C8 /* Anymemo */,
+				0490796619056445004874C8 /* AnymemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0490794419056444004874C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0490798E19056691004874C8 /* settings@2x.png in Resources */,
+				0490798819056691004874C8 /* download@2x.png in Resources */,
+				0490798C19056691004874C8 /* resent@2x.png in Resources */,
+				0490799619056897004874C8 /* all_items.json in Resources */,
+				0490796219056445004874C8 /* Images.xcassets in Resources */,
+				0490795419056444004874C8 /* InfoPlist.strings in Resources */,
+				0490795D19056445004874C8 /* Main.storyboard in Resources */,
+				0490798719056691004874C8 /* download.png in Resources */,
+				0490798D19056691004874C8 /* settings.png in Resources */,
+				0490798919056691004874C8 /* open.png in Resources */,
+				0490798B19056691004874C8 /* resent.png in Resources */,
+				0490798A19056691004874C8 /* open@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0490796519056445004874C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0490797319056445004874C8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0490794219056444004874C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0490795A19056444004874C8 /* AppDelegate.m in Sources */,
+				04907994190567D7004874C8 /* DownloadCell.m in Sources */,
+				0490795619056444004874C8 /* main.m in Sources */,
+				0490799919056ABC004874C8 /* DownloadDetailTableViewController.m in Sources */,
+				0490799119056730004874C8 /* DownloadTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0490796319056445004874C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0490797519056445004874C8 /* AnymemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0490796D19056445004874C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0490794519056444004874C8 /* Anymemo */;
+			targetProxy = 0490796C19056445004874C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0490795219056444004874C8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0490795319056444004874C8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0490795B19056445004874C8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0490795C19056445004874C8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0490797119056445004874C8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0490797219056445004874C8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0490797619056445004874C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0490797719056445004874C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0490797919056445004874C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Anymemo/Anymemo-Prefix.pch";
+				INFOPLIST_FILE = "Anymemo/Anymemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0490797A19056445004874C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Anymemo/Anymemo-Prefix.pch";
+				INFOPLIST_FILE = "Anymemo/Anymemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0490797C19056445004874C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Anymemo.app/Anymemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Anymemo/Anymemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AnymemoTests/AnymemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		0490797D19056445004874C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Anymemo.app/Anymemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Anymemo/Anymemo-Prefix.pch";
+				INFOPLIST_FILE = "AnymemoTests/AnymemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0490794119056444004874C8 /* Build configuration list for PBXProject "Anymemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0490797619056445004874C8 /* Debug */,
+				0490797719056445004874C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0490797819056445004874C8 /* Build configuration list for PBXNativeTarget "Anymemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0490797919056445004874C8 /* Debug */,
+				0490797A19056445004874C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0490797B19056445004874C8 /* Build configuration list for PBXNativeTarget "AnymemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0490797C19056445004874C8 /* Debug */,
+				0490797D19056445004874C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0490793E19056444004874C8 /* Project object */;
+}
