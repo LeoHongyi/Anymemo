@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>1325FAC7-64FB-4A54-BD41-375EA18A58A5</string>
+	<string>4A7569A3-4C68-4081-88DB-A63ADDA02D92</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Anymemo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>ABDBAAA4-30F6-46AB-8148-405E92D93256</key>
-		<string>http://git.taskcenter.cn/github/git/xiaop/Anymemo.git</string>
+		<key>59FA5EA4-EF97-49E2-AE83-1B6FB06DFC5F</key>
+		<string>ssh://git.taskcenter.cn/ios/anymemo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Anymemo/Anymemo.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>ABDBAAA4-30F6-46AB-8148-405E92D93256</key>
+		<key>59FA5EA4-EF97-49E2-AE83-1B6FB06DFC5F</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>http://git.taskcenter.cn/github/git/xiaop/Anymemo.git</string>
+	<string>ssh://git.taskcenter.cn/ios/anymemo.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>ABDBAAA4-30F6-46AB-8148-405E92D93256</string>
+	<string>59FA5EA4-EF97-49E2-AE83-1B6FB06DFC5F</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>ABDBAAA4-30F6-46AB-8148-405E92D93256</string>
+			<string>59FA5EA4-EF97-49E2-AE83-1B6FB06DFC5F</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Anymemo</string>
+			<string>anymemo</string>
 		</dict>
 	</array>
 </dict>

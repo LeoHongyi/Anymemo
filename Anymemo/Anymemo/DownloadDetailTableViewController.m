@@ -11,6 +11,7 @@
 #import "DownloadManager.h"
 #import "AppDelegate.h"
 #import "MBProgressHUD.h"
+#import "DataManager.h"
 @interface DownloadDetailTableViewController ()
 @property (nonatomic,strong)MBProgressHUD *hud;
 @end
@@ -32,6 +33,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title=@"列表";
     self.hud=[[MBProgressHUD alloc] initWithView:self.navigationController.view];
     self.hud.mode = MBProgressHUDModeDeterminateHorizontalBar;
     [self.navigationController.view addSubview:self.hud];
@@ -63,10 +65,17 @@
         [[DownloadManager sharedManager] downloadMemo:cell.memo onProgress:^(float progress) {
             NSLog(@"%f",progress);
             self.hud.progress=progress;
-        } onComplete:^(BOOL success) {
+        } onComplete:^(BOOL success,id parameter) {
+            if (success) {
+//                NSLog(@"download complete:%@\n savepath:%@",cell.memo,parameter);
+                [[DataManager shareManager] addDownloadItem:cell.memo savePath:parameter];
+                [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationRight];
+            }
             [self.hud hide:YES];
         }];
     };
+    BOOL islocal=[[DataManager shareManager] isLocal:memoinfo[@"Url"]];
+    [cell setLocal:islocal];
     return cell;
 }
 

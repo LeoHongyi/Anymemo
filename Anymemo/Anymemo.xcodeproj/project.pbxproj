@@ -16,19 +16,12 @@
 		04589CCC19094CD200EB85F3 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 04589CC119094CD200EB85F3 /* AFURLRequestSerialization.m */; };
 		04589CCD19094CD200EB85F3 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 04589CC319094CD200EB85F3 /* AFURLResponseSerialization.m */; };
 		04589CCE19094CD200EB85F3 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04589CC519094CD200EB85F3 /* AFURLSessionManager.m */; };
-		04589CE719094DEB00EB85F3 /* MRBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04589CD219094DEB00EB85F3 /* MRBlurView.m */; };
-		04589CE819094DEB00EB85F3 /* UIImage+MRImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 04589CD419094DEB00EB85F3 /* UIImage+MRImageEffects.m */; };
-		04589CE919094DEB00EB85F3 /* MRActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04589CD719094DEB00EB85F3 /* MRActivityIndicatorView.m */; };
-		04589CEA19094DEB00EB85F3 /* MRCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04589CD919094DEB00EB85F3 /* MRCircularProgressView.m */; };
-		04589CEB19094DEB00EB85F3 /* MRIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04589CDB19094DEB00EB85F3 /* MRIconView.m */; };
-		04589CEC19094DEB00EB85F3 /* MRNavigationBarProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04589CDD19094DEB00EB85F3 /* MRNavigationBarProgressView.m */; };
-		04589CED19094DEB00EB85F3 /* MRProgressOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04589CDF19094DEB00EB85F3 /* MRProgressOverlayView.m */; };
-		04589CEE19094DEB00EB85F3 /* MRMessageInterceptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 04589CE319094DEB00EB85F3 /* MRMessageInterceptor.m */; };
-		04589CEF19094DEB00EB85F3 /* MRWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04589CE619094DEB00EB85F3 /* MRWeakProxy.m */; };
 		04589CF2190950A500EB85F3 /* download_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 04589CF0190950A500EB85F3 /* download_btn.png */; };
 		04589CF3190950A500EB85F3 /* download_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04589CF1190950A500EB85F3 /* download_btn@2x.png */; };
 		04589CF61909529000EB85F3 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04589CF51909529000EB85F3 /* DownloadManager.m */; };
 		04589CFA1909596B00EB85F3 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 04589CF91909596B00EB85F3 /* MBProgressHUD.m */; };
+		046EBABC190BF45C005A1F81 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 046EBABB190BF45C005A1F81 /* DataManager.m */; };
+		046EBABF190BFB27005A1F81 /* OpenTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046EBABE190BFB27005A1F81 /* OpenTableViewController.m */; };
 		0490794A19056444004874C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490794919056444004874C8 /* Foundation.framework */; };
 		0490794C19056444004874C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490794B19056444004874C8 /* CoreGraphics.framework */; };
 		0490794E19056444004874C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490794D19056444004874C8 /* UIKit.framework */; };
@@ -86,32 +79,16 @@
 		04589CC319094CD200EB85F3 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		04589CC419094CD200EB85F3 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		04589CC519094CD200EB85F3 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		04589CD119094DEB00EB85F3 /* MRBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRBlurView.h; sourceTree = "<group>"; };
-		04589CD219094DEB00EB85F3 /* MRBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRBlurView.m; sourceTree = "<group>"; };
-		04589CD319094DEB00EB85F3 /* UIImage+MRImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MRImageEffects.h"; sourceTree = "<group>"; };
-		04589CD419094DEB00EB85F3 /* UIImage+MRImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MRImageEffects.m"; sourceTree = "<group>"; };
-		04589CD619094DEB00EB85F3 /* MRActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRActivityIndicatorView.h; sourceTree = "<group>"; };
-		04589CD719094DEB00EB85F3 /* MRActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRActivityIndicatorView.m; sourceTree = "<group>"; };
-		04589CD819094DEB00EB85F3 /* MRCircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRCircularProgressView.h; sourceTree = "<group>"; };
-		04589CD919094DEB00EB85F3 /* MRCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRCircularProgressView.m; sourceTree = "<group>"; };
-		04589CDA19094DEB00EB85F3 /* MRIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRIconView.h; sourceTree = "<group>"; };
-		04589CDB19094DEB00EB85F3 /* MRIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRIconView.m; sourceTree = "<group>"; };
-		04589CDC19094DEB00EB85F3 /* MRNavigationBarProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRNavigationBarProgressView.h; sourceTree = "<group>"; };
-		04589CDD19094DEB00EB85F3 /* MRNavigationBarProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRNavigationBarProgressView.m; sourceTree = "<group>"; };
-		04589CDE19094DEB00EB85F3 /* MRProgressOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRProgressOverlayView.h; sourceTree = "<group>"; };
-		04589CDF19094DEB00EB85F3 /* MRProgressOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRProgressOverlayView.m; sourceTree = "<group>"; };
-		04589CE019094DEB00EB85F3 /* MRProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRProgress.h; sourceTree = "<group>"; };
-		04589CE219094DEB00EB85F3 /* MRMessageInterceptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRMessageInterceptor.h; sourceTree = "<group>"; };
-		04589CE319094DEB00EB85F3 /* MRMessageInterceptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRMessageInterceptor.m; sourceTree = "<group>"; };
-		04589CE419094DEB00EB85F3 /* MRProgressHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRProgressHelper.h; sourceTree = "<group>"; };
-		04589CE519094DEB00EB85F3 /* MRWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRWeakProxy.h; sourceTree = "<group>"; };
-		04589CE619094DEB00EB85F3 /* MRWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRWeakProxy.m; sourceTree = "<group>"; };
 		04589CF0190950A500EB85F3 /* download_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = download_btn.png; sourceTree = "<group>"; };
 		04589CF1190950A500EB85F3 /* download_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "download_btn@2x.png"; sourceTree = "<group>"; };
 		04589CF41909529000EB85F3 /* DownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
 		04589CF51909529000EB85F3 /* DownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
 		04589CF81909596B00EB85F3 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		04589CF91909596B00EB85F3 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		046EBABA190BF45C005A1F81 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		046EBABB190BF45C005A1F81 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		046EBABD190BFB27005A1F81 /* OpenTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenTableViewController.h; sourceTree = "<group>"; };
+		046EBABE190BFB27005A1F81 /* OpenTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenTableViewController.m; sourceTree = "<group>"; };
 		0490794619056444004874C8 /* Anymemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anymemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0490794919056444004874C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0490794B19056444004874C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -196,55 +173,17 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
-		04589CCF19094DEB00EB85F3 /* mrprogress_src */ = {
+		046EBAC0190BFB8B005A1F81 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				04589CD019094DEB00EB85F3 /* Blur */,
-				04589CD519094DEB00EB85F3 /* Components */,
-				04589CE019094DEB00EB85F3 /* MRProgress.h */,
-				04589CE119094DEB00EB85F3 /* Utils */,
+				0490799719056ABC004874C8 /* DownloadDetailTableViewController.h */,
+				0490799819056ABC004874C8 /* DownloadDetailTableViewController.m */,
+				0490798F19056730004874C8 /* DownloadTableViewController.h */,
+				0490799019056730004874C8 /* DownloadTableViewController.m */,
+				046EBABD190BFB27005A1F81 /* OpenTableViewController.h */,
+				046EBABE190BFB27005A1F81 /* OpenTableViewController.m */,
 			);
-			path = mrprogress_src;
-			sourceTree = "<group>";
-		};
-		04589CD019094DEB00EB85F3 /* Blur */ = {
-			isa = PBXGroup;
-			children = (
-				04589CD119094DEB00EB85F3 /* MRBlurView.h */,
-				04589CD219094DEB00EB85F3 /* MRBlurView.m */,
-				04589CD319094DEB00EB85F3 /* UIImage+MRImageEffects.h */,
-				04589CD419094DEB00EB85F3 /* UIImage+MRImageEffects.m */,
-			);
-			path = Blur;
-			sourceTree = "<group>";
-		};
-		04589CD519094DEB00EB85F3 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				04589CD619094DEB00EB85F3 /* MRActivityIndicatorView.h */,
-				04589CD719094DEB00EB85F3 /* MRActivityIndicatorView.m */,
-				04589CD819094DEB00EB85F3 /* MRCircularProgressView.h */,
-				04589CD919094DEB00EB85F3 /* MRCircularProgressView.m */,
-				04589CDA19094DEB00EB85F3 /* MRIconView.h */,
-				04589CDB19094DEB00EB85F3 /* MRIconView.m */,
-				04589CDC19094DEB00EB85F3 /* MRNavigationBarProgressView.h */,
-				04589CDD19094DEB00EB85F3 /* MRNavigationBarProgressView.m */,
-				04589CDE19094DEB00EB85F3 /* MRProgressOverlayView.h */,
-				04589CDF19094DEB00EB85F3 /* MRProgressOverlayView.m */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		04589CE119094DEB00EB85F3 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				04589CE219094DEB00EB85F3 /* MRMessageInterceptor.h */,
-				04589CE319094DEB00EB85F3 /* MRMessageInterceptor.m */,
-				04589CE419094DEB00EB85F3 /* MRProgressHelper.h */,
-				04589CE519094DEB00EB85F3 /* MRWeakProxy.h */,
-				04589CE619094DEB00EB85F3 /* MRWeakProxy.m */,
-			);
-			path = Utils;
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		0490793D19056444004874C8 = {
@@ -282,13 +221,9 @@
 			children = (
 				04589CF81909596B00EB85F3 /* MBProgressHUD.h */,
 				04589CF91909596B00EB85F3 /* MBProgressHUD.m */,
-				04589CCF19094DEB00EB85F3 /* mrprogress_src */,
 				04589CB219094CD200EB85F3 /* AFNetworking */,
 				0490799519056897004874C8 /* all_items.json */,
-				0490799719056ABC004874C8 /* DownloadDetailTableViewController.h */,
-				0490799819056ABC004874C8 /* DownloadDetailTableViewController.m */,
-				0490798F19056730004874C8 /* DownloadTableViewController.h */,
-				0490799019056730004874C8 /* DownloadTableViewController.m */,
+				046EBAC0190BFB8B005A1F81 /* ViewControllers */,
 				0490795819056444004874C8 /* AppDelegate.h */,
 				0490795919056444004874C8 /* AppDelegate.m */,
 				0490795B19056445004874C8 /* Main.storyboard */,
@@ -296,6 +231,8 @@
 				04907993190567D7004874C8 /* DownloadCell.m */,
 				04589CF41909529000EB85F3 /* DownloadManager.h */,
 				04589CF51909529000EB85F3 /* DownloadManager.m */,
+				046EBABA190BF45C005A1F81 /* DataManager.h */,
+				046EBABB190BF45C005A1F81 /* DataManager.m */,
 				0490796119056445004874C8 /* Images.xcassets */,
 				0490795019056444004874C8 /* Supporting Files */,
 			);
@@ -457,18 +394,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04589CEE19094DEB00EB85F3 /* MRMessageInterceptor.m in Sources */,
-				04589CED19094DEB00EB85F3 /* MRProgressOverlayView.m in Sources */,
 				04589CCB19094CD200EB85F3 /* AFURLConnectionOperation.m in Sources */,
-				04589CE819094DEB00EB85F3 /* UIImage+MRImageEffects.m in Sources */,
 				04589CC619094CD200EB85F3 /* AFHTTPRequestOperation.m in Sources */,
-				04589CEB19094DEB00EB85F3 /* MRIconView.m in Sources */,
-				04589CEF19094DEB00EB85F3 /* MRWeakProxy.m in Sources */,
-				04589CE919094DEB00EB85F3 /* MRActivityIndicatorView.m in Sources */,
 				04589CC919094CD200EB85F3 /* AFNetworkReachabilityManager.m in Sources */,
 				04589CCE19094CD200EB85F3 /* AFURLSessionManager.m in Sources */,
+				046EBABC190BF45C005A1F81 /* DataManager.m in Sources */,
 				04589CCC19094CD200EB85F3 /* AFURLRequestSerialization.m in Sources */,
-				04589CEC19094DEB00EB85F3 /* MRNavigationBarProgressView.m in Sources */,
 				0490795A19056444004874C8 /* AppDelegate.m in Sources */,
 				04589CCD19094CD200EB85F3 /* AFURLResponseSerialization.m in Sources */,
 				04907994190567D7004874C8 /* DownloadCell.m in Sources */,
@@ -476,12 +407,11 @@
 				04589CC719094CD200EB85F3 /* AFHTTPRequestOperationManager.m in Sources */,
 				04589CFA1909596B00EB85F3 /* MBProgressHUD.m in Sources */,
 				04589CCA19094CD200EB85F3 /* AFSecurityPolicy.m in Sources */,
-				04589CEA19094DEB00EB85F3 /* MRCircularProgressView.m in Sources */,
 				0490799919056ABC004874C8 /* DownloadDetailTableViewController.m in Sources */,
 				0490799119056730004874C8 /* DownloadTableViewController.m in Sources */,
 				04589CC819094CD200EB85F3 /* AFHTTPSessionManager.m in Sources */,
-				04589CE719094DEB00EB85F3 /* MRBlurView.m in Sources */,
 				04589CF61909529000EB85F3 /* DownloadManager.m in Sources */,
+				046EBABF190BFB27005A1F81 /* OpenTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

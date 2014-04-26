@@ -32,12 +32,12 @@
                 NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
                 return [documentsDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
             } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+                NSLog(@"File downloaded to: %@", [filePath path]);
                 if (error!=nil) {
-                    completecb(NO);
+                    completecb(NO,nil);
                 }else{
-                    completecb(YES);
+                    completecb(YES,[filePath path]);
                 }
-                NSLog(@"File downloaded to: %@", filePath);
             }];
             [progress addObserver:self
                        forKeyPath:@"fractionCompleted"

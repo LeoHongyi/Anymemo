@@ -1,19 +1,18 @@
 //
-//  DownloadTableViewController.m
+//  OpenTableViewController.m
 //  Anymemo
 //
-//  Created by pengyunchou on 14-4-21.
+//  Created by pengyunchou on 14-4-26.
 //  Copyright (c) 2014年 skysent. All rights reserved.
 //
-
-#import "DownloadTableViewController.h"
-#import "DownloadDetailTableViewController.h"
 #import "DataManager.h"
-@interface DownloadTableViewController ()
-@property (nonatomic,strong)NSString* selectCategory;
+#import "OpenTableViewController.h"
+
+@interface OpenTableViewController ()
+@property (nonatomic,strong)NSDictionary *downloadItems;
 @end
 
-@implementation DownloadTableViewController
+@implementation OpenTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -27,14 +26,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title=@"分类";
+    self.title=@"打开";
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    self.downloadItems=[[DataManager shareManager] getAllDownloadItems];
+    [self.tableView reloadData];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -43,35 +47,23 @@
 
 #pragma mark - Table view data source
 
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[[DataManager shareManager] getAllCategories] count];
+    return [self.downloadItems count];
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DownloadCell" forIndexPath:indexPath];
-    cell.textLabel.text=[[DataManager shareManager] getAllCategories][indexPath.row];
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"OpenCell" forIndexPath:indexPath];
+    NSArray* allitemkesy=[self.downloadItems allKeys];
+    NSDictionary *itemInfo=self.downloadItems[allitemkesy[indexPath.row]];
+    NSDictionary* memoinfo=itemInfo[@"memo"];
+    cell.textLabel.text=memoinfo[@"Name"];
+    cell.detailTextLabel.text=memoinfo[@"Author"];
     return cell;
 }
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([segue.identifier isEqualToString:@"downloaddetail"]) {
-        DownloadDetailTableViewController* destinagion=[segue destinationViewController];
-        destinagion.memos=[[DataManager shareManager] getAllItems][self.selectCategory];
-    }
-}
-- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    self.selectCategory=[[DataManager shareManager] getAllCategories][indexPath.row];
-    return indexPath;
-}
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    NSLog(@"%@",self.selectCategory);
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-}
+
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -110,5 +102,15 @@
 }
 */
 
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

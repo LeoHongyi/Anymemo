@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 typedef void(^onDownlaodProgress) (float progress);
-typedef void(^onDownloadComplete) (BOOL success);
+typedef void(^onDownloadComplete) (BOOL success,id parmeter);
 
 @interface DownloadManager : NSObject
 

@@ -19,5 +19,5 @@ typedef void(^onDownloadCellClickedCb)(DownloadCell *cell);
 @property (weak, nonatomic) IBOutlet UILabel *descLabel;
 @property (weak, nonatomic) IBOutlet UIButton *downloadBtn;
 - (IBAction)downloadBtnClicked:(id)sender;
-
+-(void)setLocal:(BOOL)islocal;
 @end

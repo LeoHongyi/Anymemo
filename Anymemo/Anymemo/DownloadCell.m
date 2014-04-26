@@ -30,7 +30,13 @@
 
     // Configure the view for the selected state
 }
-
+-(void)setLocal:(BOOL)islocal{
+    if (islocal) {
+        self.downloadBtn.hidden=YES;
+    }else{
+        self.downloadBtn.hidden=NO;
+    }
+}
 - (IBAction)downloadBtnClicked:(id)sender {
     NSLog(@"downlaod btn clicked");
     if (self.downloadCb!=nil) {
