@@ -7,12 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "Quetion.h"
 @interface DataManager : NSObject
 -(NSDictionary *)getAllItems;
 -(NSArray *)getAllCategories;
 -(NSDictionary *)getAllDownloadItems;
 -(BOOL)isLocal:(NSString *)url;
 -(void)addDownloadItem:(NSDictionary *)mono savePath:(NSString *)savePath;
+-(void)removeDownloadItem:(NSString *)key;
+-(void)openMemo:(NSDictionary *)memo;
+-(Quetion *)getRandomQuestion;
 +(instancetype)shareManager;
 @end

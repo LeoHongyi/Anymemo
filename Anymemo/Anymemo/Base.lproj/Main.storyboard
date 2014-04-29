@@ -109,11 +109,20 @@
                             <outlet property="delegate" destination="986-Pb-qfJ" id="rZG-4R-O64"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="dRM-aW-x9I"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="dRM-aW-x9I">
+                        <barButtonItem key="rightBarButtonItem" title="编辑" id="N7h-eg-L28">
+                            <connections>
+                                <action selector="editBtnClicked:" destination="986-Pb-qfJ" id="1ic-5d-aft"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="editBtn" destination="N7h-eg-L28" id="aCz-20-RB6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVL-HC-zh0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="594" y="-807"/>
+            <point key="canvasLocation" x="793" y="-807"/>
         </scene>
         <!--Navigation Controller - 打开-->
         <scene sceneID="Dkv-T9-kqa">
@@ -129,7 +138,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jzH-mi-dQX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="176" y="-315"/>
+            <point key="canvasLocation" x="112" y="-374"/>
         </scene>
         <!--Download Table View Controller - 分类-->
         <scene sceneID="uzW-69-CtF">
@@ -231,10 +240,10 @@
             </objects>
             <point key="canvasLocation" x="1081" y="277"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="otB-jb-kvu">
             <objects>
-                <viewController id="P8T-ZD-H9g" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="P8T-ZD-H9g" customClass="DetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Fld-Fe-1B0"/>
                         <viewControllerLayoutGuide type="bottom" id="8Ww-CI-btH"/>
@@ -247,7 +256,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BxV-UW-Lit" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1010" y="-397"/>
+            <point key="canvasLocation" x="1274" y="-392"/>
         </scene>
         <!--Navigation Controller - 下载-->
         <scene sceneID="s2z-pb-dX4">

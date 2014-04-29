@@ -7,8 +7,9 @@
 //
 #import "DataManager.h"
 #import "OpenTableViewController.h"
-
+#import "DetailViewController.h"
 @interface OpenTableViewController ()
+@property BOOL isEditing;
 @property (nonatomic,strong)NSDictionary *downloadItems;
 @end
 
@@ -22,7 +23,30 @@
     }
     return self;
 }
-
+- (IBAction)editBtnClicked:(id)sender {
+    self.isEditing=!self.isEditing;
+    self.editBtn.title=self.isEditing?@"完成":@"编辑";
+    [self.tableView setEditing:self.isEditing animated:YES];
+}
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (UITableViewCellEditingStyleDelete==editingStyle) {
+        [self deleteDownloadItemAtIndex:indexPath.row];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+    }
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    DetailViewController *detail=[self.storyboard instantiateViewControllerWithIdentifier:@"DetailViewController"];
+    NSArray* allitemkesy=[self.downloadItems allKeys];
+    NSString* key=allitemkesy[indexPath.row];
+    detail.memo=self.downloadItems[key];
+    [self.navigationController pushViewController:detail animated:YES];
+}
+-(void)deleteDownloadItemAtIndex:(int)index{
+    NSArray* allitemkesy=[self.downloadItems allKeys];
+    NSString* key=allitemkesy[index];
+    [[DataManager shareManager] removeDownloadItem:key];
+    self.downloadItems=[[DataManager shareManager] getAllDownloadItems];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -112,5 +136,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end

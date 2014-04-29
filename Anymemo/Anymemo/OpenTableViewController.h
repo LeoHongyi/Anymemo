@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface OpenTableViewController : UITableViewController
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *editBtn;
+- (IBAction)editBtnClicked:(id)sender;
 
 @end

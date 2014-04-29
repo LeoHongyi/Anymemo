@@ -9,6 +9,8 @@
 #import "DataManager.h"
 
 @interface DataManager()
+@property (nonatomic,strong)FMDatabase* db;
+@property (nonatomic,strong)NSDictionary* currentMemo;
 @property (nonatomic,strong)NSDictionary *allItems;
 @property (nonatomic,strong)NSArray *allcategories;
 @property (nonatomic,strong)NSMutableDictionary* downloadedItems;
@@ -28,6 +30,14 @@
     if (self.downloadedItems==nil) {
         self.downloadedItems=[NSMutableDictionary dictionary];
     }
+}
+-(void)removeDownloadItem:(NSString *)key{
+    NSDictionary* itemInfo=self.downloadedItems[key];
+    NSString* localpath=itemInfo[@"local"];
+    NSFileManager* fmgr=[NSFileManager defaultManager];
+    [fmgr removeItemAtPath:localpath error:nil];
+    [self.downloadedItems removeObjectForKey:key];
+    [self saveDownloadItemsToFile];
 }
 -(void)saveDownloadItemsToFile{
     NSData* downloaditemsdata=[NSJSONSerialization dataWithJSONObject:self.downloadedItems options:NSJSONWritingPrettyPrinted error:nil];
@@ -62,6 +72,37 @@
         [self loadData];
     }
     return self;
+}
+-(void)createOkTableIfNotExist{
+    if (self.db!=nil) {
+        NSString* sql=@"CREATE TABLE IF NOT EXISTS dict_ok(id integer);";
+        [self.db executeUpdate:sql];
+    }else{
+        NSLog(@"db not opend.");
+    }
+}
+-(Quetion *)getRandomQuestion{
+    NSString* sql=@"SELECT * FROM dict_tbl ORDER BY RANDOM() LIMIT 1;";
+    FMResultSet* rs=[self.db executeQuery:sql];
+    if ([rs next]) {
+        Quetion *q=[[Quetion alloc] init];
+        q.qid=@([rs intForColumn:@"_id"]);
+        q.question=[rs stringForColumn:@"question"];
+        q.answer=[rs stringForColumn:@"answer"];
+        q.note=[rs stringForColumn:@"note"];
+        return q;
+    }
+    return nil;
+}
+-(void)openMemo:(NSDictionary *)memo{
+    if (self.db!=nil) {
+        [self.db close];
+    }
+    self.currentMemo=memo;
+    NSString* localpath=memo[@"local"];
+    self.db=[FMDatabase databaseWithPath:localpath];
+    [self.db open];
+    [self createOkTableIfNotExist];
 }
 +(instancetype)shareManager{
     static DataManager* manager=nil;
