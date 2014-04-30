@@ -8,8 +8,9 @@
 
 #import "DetailViewController.h"
 #import "DataManager.h"
+#import "AnswerView.h"
 @interface DetailViewController ()
-
+@property (nonatomic,strong)AnswerView* currentAnswerview;
 @end
 
 @implementation DetailViewController
@@ -26,9 +27,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSLog(@"%@",self.memo);
+    self.title=@"记忆";
+    self.currentAnswerview=[[AnswerView alloc] initWithFrame:CGRectMake(10, 74, self.view.frame.size.width-20, self.view.frame.size.height-134)];
+    [self.view addSubview:self.currentAnswerview];
+    
     [[DataManager shareManager] openMemo:self.memo];
-    NSLog(@"%@",[[DataManager shareManager] getRandomQuestion]);
+    [self.currentAnswerview setInfoWithQuestion:[[DataManager shareManager] getRandomQuestion]];
     // Do any additional setup after loading the view.
 }
 
