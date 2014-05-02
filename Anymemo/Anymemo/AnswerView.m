@@ -16,6 +16,7 @@
 @property (nonatomic,strong)UIButton*remenberBtn;
 @property (nonatomic,strong)UILabel* answerLabel;
 @property (nonatomic,strong)UIButton* nextBtn;
+@property (nonatomic,strong)Quetion* curerntQuestion;
 @end
 
 @implementation AnswerView
@@ -92,13 +93,19 @@
     } completion:nil];
 }
 -(void)goNext{
-    NSLog(@"go next");
+    if (self.onNextCb!=nil) {
+        self.onNextCb();
+    }
 }
 -(void)onNextBtnClicked:(UIButton *)btn{
+    
     [self goNext];
 }
 -(void)onRememberBtnClicked:(UIButton *)btn{
     self.isRemember=YES;
+    if (self.onRememberCb!=nil) {
+        self.onRememberCb(self.curerntQuestion);
+    }
     [self flip];
 }
 -(void)onForgetBtnClicked:(UIButton *)btn{
@@ -126,6 +133,7 @@
     return labelSize;
 }
 -(void)setInfoWithQuestion:(Quetion *)question{
+    self.curerntQuestion=question;
     self.questionLabel.text=question.question;
     
     CGSize questionsize=[self heightForText:self.questionLabel];

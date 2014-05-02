@@ -23,16 +23,61 @@
     }
     return self;
 }
-
+-(void)alertComplete{
+    UIAlertView* alert=[[UIAlertView alloc] initWithTitle:@"提示" message:@"你已经完成了所有卡片记忆！" delegate:nil cancelButtonTitle:nil otherButtonTitles:nil, nil];
+    [alert show];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [alert dismissWithClickedButtonIndex:0 animated:YES];
+        [self.navigationController popViewControllerAnimated:YES];
+    });
+}
+-(void)goNextAnserView{
+    DetailViewController* me=self;
+    AnswerView* oldview=me.currentAnswerview;
+    me.currentAnswerview=[[AnswerView alloc] initWithFrame:CGRectMake(10+320, 74, me.view.frame.size.width-20, me.view.frame.size.height-134)];
+    Quetion* question=[[DataManager shareManager] getRandomQuestion];
+    if (question==nil) {
+        [self alertComplete];
+        return;
+    }
+    [me.currentAnswerview setInfoWithQuestion:question];
+    me.currentAnswerview.onRememberCb=^(Quetion *q){
+        [self onRemember:q];
+    };
+    self.currentAnswerview.onNextCb=^{
+        [me goNextAnserView];
+    };
+    [me.view addSubview:me.currentAnswerview];
+    [UIView animateWithDuration:1 animations:^{
+        oldview.frame=CGRectMake(-320, 20, me.view.frame.size.width-20, me.view.frame.size.height-134);
+        me.currentAnswerview.frame=CGRectMake(10, 74, me.view.frame.size.width-20, me.view.frame.size.height-134);
+    } completion:^(BOOL finished) {
+        [oldview removeFromSuperview];
+    }];
+}
+-(void)onRemember:(Quetion *)q{
+    [[DataManager shareManager] insertOkTable:q.qid];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    DetailViewController* me=self;
     self.title=@"记忆";
-    self.currentAnswerview=[[AnswerView alloc] initWithFrame:CGRectMake(10, 74, self.view.frame.size.width-20, self.view.frame.size.height-134)];
-    [self.view addSubview:self.currentAnswerview];
-    
     [[DataManager shareManager] openMemo:self.memo];
-    [self.currentAnswerview setInfoWithQuestion:[[DataManager shareManager] getRandomQuestion]];
+    self.currentAnswerview=[[AnswerView alloc] initWithFrame:CGRectMake(10, 74, self.view.frame.size.width-20, self.view.frame.size.height-134)];
+    Quetion* question=[[DataManager shareManager] getRandomQuestion];
+    if (question==nil) {
+        [self alertComplete];
+        return;
+    }
+    [self.currentAnswerview setInfoWithQuestion:question];
+    self.currentAnswerview.onRememberCb=^(Quetion *q){
+        [me onRemember:q];
+    };
+    [self.view addSubview:self.currentAnswerview];
+    self.currentAnswerview.onNextCb=^{
+        [me goNextAnserView];
+    };
     // Do any additional setup after loading the view.
 }
 

@@ -81,8 +81,12 @@
         NSLog(@"db not opend.");
     }
 }
+-(void)insertOkTable:(NSNumber *)qid{
+    NSString* sql=[NSString stringWithFormat:@"insert into dict_ok(id) values(%@)",qid];
+    [self.db executeUpdate:sql];
+}
 -(Quetion *)getRandomQuestion{
-    NSString* sql=@"SELECT * FROM dict_tbl ORDER BY RANDOM() LIMIT 1;";
+    NSString* sql=@"select * from dict_tbl where _id not in (select id from dict_ok) ORDER BY RANDOM() LIMIT 1;";
     FMResultSet* rs=[self.db executeQuery:sql];
     if ([rs next]) {
         Quetion *q=[[Quetion alloc] init];

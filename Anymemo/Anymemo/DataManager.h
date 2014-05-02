@@ -15,6 +15,7 @@
 -(BOOL)isLocal:(NSString *)url;
 -(void)addDownloadItem:(NSDictionary *)mono savePath:(NSString *)savePath;
 -(void)removeDownloadItem:(NSString *)key;
+-(void)insertOkTable:(NSNumber *)qid;
 -(void)openMemo:(NSDictionary *)memo;
 -(Quetion *)getRandomQuestion;
 +(instancetype)shareManager;
