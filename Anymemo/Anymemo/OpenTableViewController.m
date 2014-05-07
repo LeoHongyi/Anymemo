@@ -38,7 +38,9 @@
     DetailViewController *detail=[self.storyboard instantiateViewControllerWithIdentifier:@"DetailViewController"];
     NSArray* allitemkesy=[self.downloadItems allKeys];
     NSString* key=allitemkesy[indexPath.row];
-    detail.memo=self.downloadItems[key];
+    NSDictionary* memo=self.downloadItems[key];
+    [[DataManager shareManager] addRecentItem:memo];
+    detail.memo=memo;
     [self.navigationController pushViewController:detail animated:YES];
 }
 -(void)deleteDownloadItemAtIndex:(int)index{

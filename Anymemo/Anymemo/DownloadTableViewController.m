@@ -9,8 +9,9 @@
 #import "DownloadTableViewController.h"
 #import "DownloadDetailTableViewController.h"
 #import "DataManager.h"
-@interface DownloadTableViewController ()
+@interface DownloadTableViewController ()<UISearchBarDelegate>
 @property (nonatomic,strong)NSString* selectCategory;
+@property (nonatomic,strong)NSMutableDictionary* searchResults;
 @end
 
 @implementation DownloadTableViewController
@@ -23,10 +24,22 @@
     }
     return self;
 }
-
+-(void)doFiltWithKey:(NSString *)key{
+    [self.searchResults removeAllObjects];
+    [self.searchResults addEntriesFromDictionary:[[DataManager shareManager] searchWithKey:key]];
+}
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+    [self doFiltWithKey:searchText];
+    [self.tableView reloadData];
+}
+- (void)searchBarCancelButtonClicked:(UISearchBar *) searchBar{
+    [searchBar resignFirstResponder];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.searchResults=[NSMutableDictionary dictionary];
+    [self doFiltWithKey:@""];
     self.title=@"分类";
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -46,25 +59,24 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[[DataManager shareManager] getAllCategories] count];
+    return [self.searchResults count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DownloadCell" forIndexPath:indexPath];
-    cell.textLabel.text=[[DataManager shareManager] getAllCategories][indexPath.row];
-    
+    cell.textLabel.text=[self.searchResults allKeys][indexPath.row];
     return cell;
 }
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([segue.identifier isEqualToString:@"downloaddetail"]) {
         DownloadDetailTableViewController* destinagion=[segue destinationViewController];
-        destinagion.memos=[[DataManager shareManager] getAllItems][self.selectCategory];
+        destinagion.memos=self.searchResults[self.selectCategory];
     }
 }
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    self.selectCategory=[[DataManager shareManager] getAllCategories][indexPath.row];
+    self.selectCategory=[self.searchResults allKeys][indexPath.row];
     return indexPath;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

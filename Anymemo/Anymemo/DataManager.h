@@ -8,7 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "Quetion.h"
+
+#define MAX_RESENT 3
+
 @interface DataManager : NSObject
+-(void)addRecentItem:(NSDictionary *)iteminfo;
+-(NSArray *)getRecentItems;
 -(NSDictionary *)getAllItems;
 -(NSArray *)getAllCategories;
 -(NSDictionary *)getAllDownloadItems;
@@ -18,5 +23,6 @@
 -(void)insertOkTable:(NSNumber *)qid;
 -(void)openMemo:(NSDictionary *)memo;
 -(Quetion *)getRandomQuestion;
+-(NSDictionary *)searchWithKey:(NSString *)key;
 +(instancetype)shareManager;
 @end

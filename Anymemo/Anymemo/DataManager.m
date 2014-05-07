@@ -15,10 +15,36 @@
 @property (nonatomic,strong)NSArray *allcategories;
 @property (nonatomic,strong)NSMutableDictionary* downloadedItems;
 @property (nonatomic,strong)NSString* downloadItemsSavePath;
+@property (nonatomic,strong)NSString* recentSavePath;
+@property (nonatomic,strong)NSMutableArray *recentItems;
 @end
 
 @implementation DataManager
-
+-(void)addRecentItem:(NSDictionary *)iteminfo{
+    for (NSDictionary* lmomo in self.recentItems) {
+        NSDictionary* memo=lmomo[@"memo"];
+        
+        if ([iteminfo[@"memo"][@"Name"]  isEqualToString:memo[@"Name"]]) {
+            [self.recentItems removeObject:lmomo];
+            [self.recentItems addObject:iteminfo];
+            return;
+        }
+    }
+    [self.recentItems addObject:iteminfo];
+    if ([self.recentItems count]>MAX_RESENT) {
+        [self.recentItems removeObjectAtIndex:0];
+    }
+    [self saveRecentItemsToFile];
+}
+-(void)saveRecentItemsToFile{
+    NSData* recentItemsdata=[NSJSONSerialization dataWithJSONObject:self.recentItems options:NSJSONWritingPrettyPrinted error:nil];
+    if (recentItemsdata) {
+        [recentItemsdata writeToFile:self.recentSavePath atomically:YES];
+    }
+}
+-(NSArray *)getRecentItems{
+    return self.recentItems;
+}
 -(void)loadData{
     NSData *allitemdata=[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"all_items" ofType:@"json"]];
     self.allItems=[NSJSONSerialization JSONObjectWithData:allitemdata options:NSJSONReadingMutableContainers error:nil];
@@ -29,6 +55,14 @@
     }
     if (self.downloadedItems==nil) {
         self.downloadedItems=[NSMutableDictionary dictionary];
+    }
+    NSData* recentdata=[NSData dataWithContentsOfFile:self.recentSavePath];
+    if (recentdata!=nil) {
+        self.recentItems=[NSJSONSerialization JSONObjectWithData:recentdata options:NSJSONReadingMutableContainers error:nil];
+    }
+    //NSLog(@"%@",self.recentItems);
+    if (self.recentItems==nil) {
+        self.recentItems=[NSMutableArray array];
     }
 }
 -(void)removeDownloadItem:(NSString *)key{
@@ -69,6 +103,7 @@
     self = [super init];
     if (self) {
         self.downloadItemsSavePath=[NSHomeDirectory() stringByAppendingPathComponent:@"Documents/downloads.json"];
+        self.recentSavePath=[NSHomeDirectory() stringByAppendingPathComponent:@"Documents/recent.json"];
         [self loadData];
     }
     return self;
@@ -97,6 +132,33 @@
         return q;
     }
     return nil;
+}
+-(NSDictionary *)searchWithKey:(NSString *)akey{
+    if ([akey length]==0) {
+        return self.allItems;
+    }else{
+        NSString* key=[akey lowercaseString];
+        NSMutableDictionary* searchresult=[NSMutableDictionary dictionary];
+        for (NSString*category in self.allItems) {
+            NSDictionary *categoryitems=self.allItems[category];
+            NSMutableArray *searchItems=[NSMutableArray array];
+            for (NSDictionary* iteminfo in categoryitems) {
+                NSString* name=[iteminfo[@"Name"] lowercaseString];
+                NSString* author=[iteminfo[@"Author"] lowercaseString];
+                if (name==nil||author==nil) {
+                    continue;
+                }
+                if ([name rangeOfString:key].location!=NSNotFound||[author rangeOfString:key].location!=NSNotFound) {
+                    [searchItems addObject:iteminfo];
+                }
+            }
+            if ([searchItems count]>0) {
+                searchresult[category]=searchItems;
+            }
+        }
+        
+        return searchresult;
+    }
 }
 -(void)openMemo:(NSDictionary *)memo{
     if (self.db!=nil) {
