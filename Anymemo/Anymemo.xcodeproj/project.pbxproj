@@ -73,6 +73,7 @@
 		04F0A585190FDDF20068C9D5 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F0A584190FDDF20068C9D5 /* libsqlite3.dylib */; };
 		04F0A588190FE3160068C9D5 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F0A587190FE3160068C9D5 /* DetailViewController.m */; };
 		04F0A58E190FECD20068C9D5 /* Quetion.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F0A58D190FECD20068C9D5 /* Quetion.m */; };
+		180AD0D1191BDA480008A37E /* webViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180AD0D0191BDA480008A37E /* webViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,6 +188,8 @@
 		04F0A587190FE3160068C9D5 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		04F0A58C190FECD20068C9D5 /* Quetion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quetion.h; sourceTree = "<group>"; };
 		04F0A58D190FECD20068C9D5 /* Quetion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quetion.m; sourceTree = "<group>"; };
+		180AD0CF191BDA480008A37E /* webViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = webViewController.h; sourceTree = "<group>"; };
+		180AD0D0191BDA480008A37E /* webViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = webViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +249,8 @@
 				0490799719056ABC004874C8 /* DownloadDetailTableViewController.h */,
 				0490799819056ABC004874C8 /* DownloadDetailTableViewController.m */,
 				0490798F19056730004874C8 /* DownloadTableViewController.h */,
+				180AD0CF191BDA480008A37E /* webViewController.h */,
+				180AD0D0191BDA480008A37E /* webViewController.m */,
 				0490799019056730004874C8 /* DownloadTableViewController.m */,
 				046EBABD190BFB27005A1F81 /* OpenTableViewController.h */,
 				046EBABE190BFB27005A1F81 /* OpenTableViewController.m */,
@@ -532,6 +537,7 @@
 				04255328191BB362001C3AB7 /* SettingVIewController.m in Sources */,
 				046EBABC190BF45C005A1F81 /* DataManager.m in Sources */,
 				04589CCC19094CD200EB85F3 /* AFURLRequestSerialization.m in Sources */,
+				180AD0D1191BDA480008A37E /* webViewController.m in Sources */,
 				0490795A19056444004874C8 /* AppDelegate.m in Sources */,
 				04589CCD19094CD200EB85F3 /* AFURLResponseSerialization.m in Sources */,
 				04907994190567D7004874C8 /* DownloadCell.m in Sources */,

@@ -23,8 +23,17 @@
     [self.navigationController pushViewController:bgs animated:YES];
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     if (indexPath.row==0) {
         [self showBackgoundSelectView];
+    }else if(indexPath.row==4){
+        UIAlertView*alert = [[UIAlertView alloc]initWithTitle:@"AnyMemo beta 1.0"
+                                                      message:@"记忆辅助软件 作者：小P Leo 官网：anymemo.org"
+                             
+                                                     delegate:nil
+                                            cancelButtonTitle:@"取消"
+                                            otherButtonTitles:@"确定",nil];
+        [alert show];
     }
 }
 - (void)viewDidLoad
@@ -36,4 +45,5 @@
 - (IBAction)displayNoteSwitchValueCanged:(id)sender {
     [[ConfigManager sharedManager] setDisplayNote:self.displayNoteSwitch.isOn];
 }
+
 @end
