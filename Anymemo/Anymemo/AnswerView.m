@@ -2,7 +2,7 @@
 //  AnswerView.m
 //  Anymemo
 //
-//  Created by pengyunchou on 14-4-30.
+//  Created by xxxx on 14-4-30.
 //  Copyright (c) 2014年 skysent. All rights reserved.
 //
 
@@ -22,19 +22,23 @@
 @implementation AnswerView
 
 -(void)setupStyleForContainerView:(UIView *)view{
-    view.backgroundColor=[UIColor whiteColor];
+   // view.backgroundColor=[UIColor whiteColor];
     view.layer.shadowColor=[[UIColor lightGrayColor] CGColor];
     view.layer.shadowOffset=CGSizeMake(5, 5);
     view.layer.shadowRadius=5;
     view.layer.shadowOpacity=0.7;
     view.layer.cornerRadius=10;
+    //self.answerContainer.backgroundColor=[UIColor redColor];
 }
-
+-(void)setCardColor:(UIColor *)c{
+    self.questionContainer.backgroundColor=c;
+    self.answerContainer.backgroundColor=c;
+}
 -(void)setupSubviews{
     self.questionContainer=[[UIView alloc] initWithFrame:self.bounds];
     [self setupStyleForContainerView:self.questionContainer];
     [self  addSubview:self.questionContainer];
-    self.questionContainer.backgroundColor=[UIColor whiteColor];
+    //self.questionContainer.backgroundColor=[UIColor whiteColor];
     self.remenberBtn=[[UIButton alloc] initWithFrame:CGRectMake(10, self.questionContainer.frame.size.height-54, (self.questionContainer.frame.size.width-30)/2, 44)];
     self.forgetBtn=[[UIButton alloc] initWithFrame:CGRectMake(self.remenberBtn.frame.origin.x+self.remenberBtn.frame.size.width+10, self.questionContainer.frame.size.height-54, (self.questionContainer.frame.size.width-30)/2, 44)];
     self.remenberBtn.backgroundColor=[UIColor greenColor];
@@ -76,6 +80,7 @@
     self.nextBtn.layer.cornerRadius=5;
     [self.nextBtn addTarget:self action:@selector(onNextBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self.answerContainer addSubview:self.nextBtn];
+    
 }
 -(void)flip{
     if (self.isRemember) {
@@ -98,7 +103,6 @@
     }
 }
 -(void)onNextBtnClicked:(UIButton *)btn{
-    
     [self goNext];
 }
 -(void)onRememberBtnClicked:(UIButton *)btn{

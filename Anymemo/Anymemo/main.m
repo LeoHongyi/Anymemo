@@ -2,7 +2,7 @@
 //  main.m
 //  Anymemo
 //
-//  Created by pengyunchou on 14-4-21.
+//  Created by xxxx on 14-4-21.
 //  Copyright (c) 2014年 skysent. All rights reserved.
 //
 

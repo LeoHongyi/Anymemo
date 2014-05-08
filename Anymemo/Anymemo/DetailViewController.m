@@ -2,13 +2,14 @@
 //  DetailViewController.m
 //  Anymemo
 //
-//  Created by pengyunchou on 14-4-29.
+//  Created by xxxx on 14-4-29.
 //  Copyright (c) 2014年 skysent. All rights reserved.
 //
 
 #import "DetailViewController.h"
 #import "DataManager.h"
 #import "AnswerView.h"
+#import "ConfigManager.h"
 @interface DetailViewController ()
 @property (nonatomic,strong)AnswerView* currentAnswerview;
 @end
@@ -35,6 +36,8 @@
     DetailViewController* me=self;
     AnswerView* oldview=me.currentAnswerview;
     me.currentAnswerview=[[AnswerView alloc] initWithFrame:CGRectMake(10+320, 74, me.view.frame.size.width-20, me.view.frame.size.height-134)];
+    [self.currentAnswerview setCardColor:[[ConfigManager sharedManager] getCardBackgourndColor]];
+    NSLog(@"%@",[[ConfigManager sharedManager] getCardBackgourndColor]);
     Quetion* question=[[DataManager shareManager] getRandomQuestion];
     if (question==nil) {
         [self alertComplete];
@@ -65,6 +68,7 @@
     self.title=@"记忆";
     [[DataManager shareManager] openMemo:self.memo];
     self.currentAnswerview=[[AnswerView alloc] initWithFrame:CGRectMake(10, 74, self.view.frame.size.width-20, self.view.frame.size.height-134)];
+    [self.currentAnswerview setCardColor:[[ConfigManager sharedManager] getCardBackgourndColor]];
     Quetion* question=[[DataManager shareManager] getRandomQuestion];
     if (question==nil) {
         [self alertComplete];

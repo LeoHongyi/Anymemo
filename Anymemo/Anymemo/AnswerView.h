@@ -2,7 +2,7 @@
 //  AnswerView.h
 //  Anymemo
 //
-//  Created by pengyunchou on 14-4-30.
+//  Created by xxxx on 14-4-30.
 //  Copyright (c) 2014年 skysent. All rights reserved.
 //
 
@@ -13,4 +13,5 @@
 @property (nonatomic,strong)void (^onRememberCb)(Quetion *q);
 -(void)setInfoWithQuestion:(Quetion *)question;
 @property BOOL isRemember;
+-(void)setCardColor:(UIColor *)c;
 @end

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04255328191BB362001C3AB7 /* SettingVIewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04255327191BB362001C3AB7 /* SettingVIewController.m */; };
+		0425532B191BB387001C3AB7 /* ConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0425532A191BB387001C3AB7 /* ConfigManager.m */; };
+		0425532E191BBAA3001C3AB7 /* Palette.m in Sources */ = {isa = PBXBuildFile; fileRef = 0425532D191BBAA3001C3AB7 /* Palette.m */; };
+		04255331191BBC0F001C3AB7 /* CardBackgroundPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04255330191BBC0F001C3AB7 /* CardBackgroundPickerViewController.m */; };
+		04255334191BBDB3001C3AB7 /* 全色.png in Resources */ = {isa = PBXBuildFile; fileRef = 04255332191BBDB3001C3AB7 /* 全色.png */; };
+		04255335191BBDB3001C3AB7 /* 全色@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04255333191BBDB3001C3AB7 /* 全色@2x.png */; };
 		04589CC619094CD200EB85F3 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04589CB419094CD200EB85F3 /* AFHTTPRequestOperation.m */; };
 		04589CC719094CD200EB85F3 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04589CB619094CD200EB85F3 /* AFHTTPRequestOperationManager.m */; };
 		04589CC819094CD200EB85F3 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04589CB819094CD200EB85F3 /* AFHTTPSessionManager.m */; };
@@ -80,6 +86,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04255326191BB362001C3AB7 /* SettingVIewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingVIewController.h; sourceTree = "<group>"; };
+		04255327191BB362001C3AB7 /* SettingVIewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingVIewController.m; sourceTree = "<group>"; };
+		04255329191BB387001C3AB7 /* ConfigManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigManager.h; sourceTree = "<group>"; };
+		0425532A191BB387001C3AB7 /* ConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigManager.m; sourceTree = "<group>"; };
+		0425532C191BBAA3001C3AB7 /* Palette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Palette.h; sourceTree = "<group>"; };
+		0425532D191BBAA3001C3AB7 /* Palette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Palette.m; sourceTree = "<group>"; };
+		0425532F191BBC0F001C3AB7 /* CardBackgroundPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardBackgroundPickerViewController.h; sourceTree = "<group>"; };
+		04255330191BBC0F001C3AB7 /* CardBackgroundPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardBackgroundPickerViewController.m; sourceTree = "<group>"; };
+		04255332191BBDB3001C3AB7 /* 全色.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "全色.png"; sourceTree = "<group>"; };
+		04255333191BBDB3001C3AB7 /* 全色@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "全色@2x.png"; sourceTree = "<group>"; };
 		04589CB319094CD200EB85F3 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		04589CB419094CD200EB85F3 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		04589CB519094CD200EB85F3 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
@@ -239,6 +255,10 @@
 				04DC553819112C8700AACC13 /* AnswerView.m */,
 				04DAF4D2191A73650083C0BB /* RecentViewController.h */,
 				04DAF4D3191A73650083C0BB /* RecentViewController.m */,
+				04255326191BB362001C3AB7 /* SettingVIewController.h */,
+				04255327191BB362001C3AB7 /* SettingVIewController.m */,
+				0425532F191BBC0F001C3AB7 /* CardBackgroundPickerViewController.h */,
+				04255330191BBC0F001C3AB7 /* CardBackgroundPickerViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -294,6 +314,10 @@
 				046EBABB190BF45C005A1F81 /* DataManager.m */,
 				04F0A58C190FECD20068C9D5 /* Quetion.h */,
 				04F0A58D190FECD20068C9D5 /* Quetion.m */,
+				04255329191BB387001C3AB7 /* ConfigManager.h */,
+				0425532A191BB387001C3AB7 /* ConfigManager.m */,
+				0425532C191BBAA3001C3AB7 /* Palette.h */,
+				0425532D191BBAA3001C3AB7 /* Palette.m */,
 				0490796119056445004874C8 /* Images.xcassets */,
 				0490795019056444004874C8 /* Supporting Files */,
 			);
@@ -333,6 +357,8 @@
 		0490797E19056691004874C8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				04255332191BBDB3001C3AB7 /* 全色.png */,
+				04255333191BBDB3001C3AB7 /* 全色@2x.png */,
 				04DAF4D5191A7AE30083C0BB /* color.png */,
 				04DAF4D6191A7AE30083C0BB /* color@2x.png */,
 				04DAF4D7191A7AE30083C0BB /* font.png */,
@@ -451,6 +477,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04255334191BBDB3001C3AB7 /* 全色.png in Resources */,
 				0490798E19056691004874C8 /* settings@2x.png in Resources */,
 				04DAF4E4191A7AE40083C0BB /* help@2x.png in Resources */,
 				04DAF4E6191A7AE40083C0BB /* info@2x.png in Resources */,
@@ -466,6 +493,7 @@
 				04589CF2190950A500EB85F3 /* download_btn.png in Resources */,
 				04DAF4E0191A7AE40083C0BB /* color@2x.png in Resources */,
 				0490795D19056445004874C8 /* Main.storyboard in Resources */,
+				04255335191BBDB3001C3AB7 /* 全色@2x.png in Resources */,
 				04DAF4E3191A7AE40083C0BB /* help.png in Resources */,
 				0490798719056691004874C8 /* download.png in Resources */,
 				0490798D19056691004874C8 /* settings.png in Resources */,
@@ -496,10 +524,12 @@
 				04589CCB19094CD200EB85F3 /* AFURLConnectionOperation.m in Sources */,
 				04F0A57F190FDDC70068C9D5 /* FMDatabase.m in Sources */,
 				04589CC619094CD200EB85F3 /* AFHTTPRequestOperation.m in Sources */,
+				0425532B191BB387001C3AB7 /* ConfigManager.m in Sources */,
 				04589CC919094CD200EB85F3 /* AFNetworkReachabilityManager.m in Sources */,
 				04F0A581190FDDC70068C9D5 /* FMDatabasePool.m in Sources */,
 				04589CCE19094CD200EB85F3 /* AFURLSessionManager.m in Sources */,
 				04DC553919112C8700AACC13 /* AnswerView.m in Sources */,
+				04255328191BB362001C3AB7 /* SettingVIewController.m in Sources */,
 				046EBABC190BF45C005A1F81 /* DataManager.m in Sources */,
 				04589CCC19094CD200EB85F3 /* AFURLRequestSerialization.m in Sources */,
 				0490795A19056444004874C8 /* AppDelegate.m in Sources */,
@@ -512,6 +542,8 @@
 				04589CCA19094CD200EB85F3 /* AFSecurityPolicy.m in Sources */,
 				0490799919056ABC004874C8 /* DownloadDetailTableViewController.m in Sources */,
 				0490799119056730004874C8 /* DownloadTableViewController.m in Sources */,
+				04255331191BBC0F001C3AB7 /* CardBackgroundPickerViewController.m in Sources */,
+				0425532E191BBAA3001C3AB7 /* Palette.m in Sources */,
 				04F0A583190FDDC70068C9D5 /* FMResultSet.m in Sources */,
 				04DAF4D4191A73650083C0BB /* RecentViewController.m in Sources */,
 				04589CC819094CD200EB85F3 /* AFHTTPSessionManager.m in Sources */,

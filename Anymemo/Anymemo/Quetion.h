@@ -2,7 +2,7 @@
 //  Quetion.h
 //  Anymemo
 //
-//  Created by pengyunchou on 14-4-29.
+//  Created by xxxx on 14-4-29.
 //  Copyright (c) 2014年 skysent. All rights reserved.
 //
 
