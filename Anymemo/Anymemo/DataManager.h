@@ -13,6 +13,7 @@
 
 @interface DataManager : NSObject
 -(void)addRecentItem:(NSDictionary *)iteminfo;
+-(void)updateQuestion:(Quetion *)q;
 -(NSArray *)getRecentItems;
 -(NSDictionary *)getAllItems;
 -(NSArray *)getAllCategories;
@@ -24,5 +25,7 @@
 -(void)openMemo:(NSDictionary *)memo;
 -(Quetion *)getRandomQuestion;
 -(NSDictionary *)searchWithKey:(NSString *)key;
+-(NSNumber *)getOkCount;
+-(NSNumber *)getTotalCount;
 +(instancetype)shareManager;
 @end

@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface webViewController : UIViewController<UIWebViewDelegate>
+@interface WebViewController : UIViewController<UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *addr;
-@property (weak, nonatomic) IBOutlet UIButton *goClicked;
+
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+- (IBAction)goClicked:(id)sender;
 
 @end

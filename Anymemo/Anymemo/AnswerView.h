@@ -14,4 +14,6 @@
 -(void)setInfoWithQuestion:(Quetion *)question;
 @property BOOL isRemember;
 -(void)setCardColor:(UIColor *)c;
+-(void)setFontColor:(UIColor *)c;
+-(void)setFont:(UIFont *)f;
 @end

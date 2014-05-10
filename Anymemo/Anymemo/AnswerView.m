@@ -7,7 +7,7 @@
 //
 
 #import "AnswerView.h"
-
+#import "DataManager.h"
 @interface AnswerView()
 @property (nonatomic,strong)UIView* questionContainer;
 @property (nonatomic,strong)UIView* answerContainer;
@@ -17,6 +17,7 @@
 @property (nonatomic,strong)UILabel* answerLabel;
 @property (nonatomic,strong)UIButton* nextBtn;
 @property (nonatomic,strong)Quetion* curerntQuestion;
+@property (nonatomic,strong)UILabel* countlabel;
 @end
 
 @implementation AnswerView
@@ -33,6 +34,14 @@
 -(void)setCardColor:(UIColor *)c{
     self.questionContainer.backgroundColor=c;
     self.answerContainer.backgroundColor=c;
+}
+-(void)setFontColor:(UIColor *)c{
+    self.questionLabel.textColor=c;
+    self.answerLabel.textColor=c;
+}
+-(void)setFont:(UIFont *)f{
+    self.questionLabel.font=f;
+    self.answerLabel.font=f;
 }
 -(void)setupSubviews{
     self.questionContainer=[[UIView alloc] initWithFrame:self.bounds];
@@ -80,7 +89,17 @@
     self.nextBtn.layer.cornerRadius=5;
     [self.nextBtn addTarget:self action:@selector(onNextBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self.answerContainer addSubview:self.nextBtn];
-    
+    self.countlabel=[[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.questionContainer.frame.size.width, 20)];
+    self.countlabel.font=[UIFont systemFontOfSize:13];
+    self.countlabel.textColor=[UIColor greenColor];
+    self.countlabel.textAlignment=NSTextAlignmentCenter;
+    [self.questionContainer addSubview:self.countlabel];
+}
+-(void)updateCountLabel{
+    self.countlabel.text=[NSString stringWithFormat:@"%@ / %@",
+                          [[DataManager shareManager] getOkCount],
+                          [[DataManager shareManager] getTotalCount]
+                          ];
 }
 -(void)flip{
     if (self.isRemember) {
@@ -137,6 +156,7 @@
     return labelSize;
 }
 -(void)setInfoWithQuestion:(Quetion *)question{
+    [self updateCountLabel];
     self.curerntQuestion=question;
     self.questionLabel.text=question.question;
     

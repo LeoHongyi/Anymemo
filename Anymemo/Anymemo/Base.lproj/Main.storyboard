@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="dLg-80-bRt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="dLg-80-bRt">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -274,6 +274,56 @@
             </objects>
             <point key="canvasLocation" x="1081" y="277"/>
         </scene>
+        <!--Font Selector View Controller-->
+        <scene sceneID="S1a-6Y-0HN">
+            <objects>
+                <viewController storyboardIdentifier="FontSelectorViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9HE-5a-WMT" customClass="FontSelectorViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cdm-bu-CiN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" id="RD6-dk-u7a">
+                                <rect key="frame" x="0.0" y="104" width="320" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="9HE-5a-WMT" id="V9v-91-kIU"/>
+                                    <outlet property="delegate" destination="9HE-5a-WMT" id="18b-Pw-dOw"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择字体:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fy3-H4-K5e">
+                                <rect key="frame" x="96" y="75" width="128" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" id="nI5-mu-tkA">
+                                <rect key="frame" x="0.0" y="310" width="320" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="9HE-5a-WMT" id="5Wo-Fb-waj"/>
+                                    <outlet property="delegate" destination="9HE-5a-WMT" id="cP5-hi-eYI"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择字体大小:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ezM-OB-mr1">
+                                <rect key="frame" x="96" y="281" width="128" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="sizePicker" destination="nI5-mu-tkA" id="0FU-z6-ocF"/>
+                        <outlet property="stylePicker" destination="RD6-dk-u7a" id="z8f-Ui-oHF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iyX-Bl-V6B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1469" y="473"/>
+        </scene>
         <!--Detail View Controller-->
         <scene sceneID="otB-jb-kvu">
             <objects>
@@ -336,8 +386,29 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Apr-XW-Dnp" imageView="TG3-4W-qW8" style="IBUITableViewCellStyleDefault" id="PWc-fK-3of">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="pfq-XH-1DQ" imageView="hWd-Bd-2Uc" style="IBUITableViewCellStyleDefault" id="AO2-y3-20f">
                                         <rect key="frame" x="0.0" y="108" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AO2-y3-20f" id="dYw-FH-cIa">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="字体颜色" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pfq-XH-1DQ">
+                                                    <rect key="frame" x="55" y="0.0" width="230" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="font_color.png" id="hWd-Bd-2Uc">
+                                                    <rect key="frame" x="15" y="9" width="25" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Apr-XW-Dnp" imageView="TG3-4W-qW8" style="IBUITableViewCellStyleDefault" id="PWc-fK-3of">
+                                        <rect key="frame" x="0.0" y="152" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PWc-fK-3of" id="zTv-4y-025">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -358,7 +429,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ckD-V5-Zjb">
-                                        <rect key="frame" x="0.0" y="152" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="196" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ckD-V5-Zjb" id="oji-TD-2pi">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -386,7 +457,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="5AF-I1-fcc" imageView="wvA-kI-01t" style="IBUITableViewCellStyleDefault" id="bvJ-8y-PAW">
-                                        <rect key="frame" x="0.0" y="196" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="240" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bvJ-8y-PAW" id="U6L-Oa-iAK">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -406,11 +477,11 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Gsu-F4-vGj" kind="push" id="er3-Ot-vBc"/>
+                                            <segue destination="Gsu-F4-vGj" kind="push" identifier="openSite" id="er3-Ot-vBc"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="sxY-pa-nqU" imageView="Wzy-iO-3Vg" style="IBUITableViewCellStyleDefault" id="KWa-WQ-N9B">
-                                        <rect key="frame" x="0.0" y="240" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="284" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KWa-WQ-N9B" id="Y4t-CD-h0J">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
@@ -445,18 +516,18 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TEw-lx-cBg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="238" y="960"/>
+            <point key="canvasLocation" x="462" y="981"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="vtn-7b-2Cy">
             <objects>
-                <viewController id="Gsu-F4-vGj" customClass="webViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4oe-Xh-XFY" customClass="MBBarProgressView">
+                <viewController id="Gsu-F4-vGj" customClass="WebViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4oe-Xh-XFY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" id="PXY-Zy-DHD">
-                                <rect key="frame" x="-10" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="-10" y="0.0" width="330" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
@@ -471,7 +542,7 @@
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="2TG-7z-LJK">
+                        <barButtonItem key="rightBarButtonItem" id="2TG-7z-LJK">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uob-DJ-Xha">
                                 <rect key="frame" x="233" y="5" width="71" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -479,23 +550,25 @@
                                 <state key="normal" title="GO">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="goClicked:" destination="Gsu-F4-vGj" eventType="touchUpInside" id="oUc-42-0ai"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addr" destination="ddN-jg-Nmp" id="KWF-zx-khw"/>
-                        <outlet property="goClicked" destination="uob-DJ-Xha" id="Zxb-eP-jFv"/>
                         <outlet property="webView" destination="PXY-Zy-DHD" id="cYJ-zB-ysp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="88P-ca-AkK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="616" y="945"/>
+            <point key="canvasLocation" x="957" y="1090"/>
         </scene>
-        <!--Card Background Picker View Controller-->
+        <!--Color Picker View Controller-->
         <scene sceneID="Wac-YA-Ycg">
             <objects>
-                <viewController storyboardIdentifier="CardBackgroundPickerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dhh-bl-tEn" customClass="CardBackgroundPickerViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CardBackgroundPickerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Dhh-bl-tEn" customClass="ColorPickerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SCL-3I-AUh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -504,7 +577,47 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r1o-gG-K6X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="967" y="1002"/>
+            <point key="canvasLocation" x="1300" y="996"/>
+        </scene>
+        <!--Note View Controller-->
+        <scene sceneID="bfu-wk-rrx">
+            <objects>
+                <viewController storyboardIdentifier="NoteViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PeJ-g7-LvH" customClass="NoteViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="l8e-ce-8Aa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="请输入笔记." id="ucs-HP-bRe">
+                                <rect key="frame" x="0.0" y="66" width="320" height="225"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="n4Y-9G-Kd9">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="X0O-zc-5oO"/>
+                                    <barButtonItem title="完成" id="sTg-3t-UJy">
+                                        <connections>
+                                            <action selector="onCompleteBtnClicked:" destination="PeJ-g7-LvH" id="RS1-4Q-32l"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="noteTextView" destination="ucs-HP-bRe" id="ARj-dW-0Fl"/>
+                        <outlet property="toolbar" destination="n4Y-9G-Kd9" id="qMw-hw-cvF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nch-Kq-K5f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1496" y="1133"/>
         </scene>
         <!--Navigation Controller - 设置-->
         <scene sceneID="E1a-Da-bkm">
@@ -528,6 +641,7 @@
         <image name="download.png" width="25" height="25"/>
         <image name="download_btn.png" width="25" height="25"/>
         <image name="font.png" width="25" height="25"/>
+        <image name="font_color.png" width="25" height="25"/>
         <image name="help.png" width="25" height="25"/>
         <image name="info.png" width="25" height="25"/>
         <image name="note.png" width="25" height="25"/>

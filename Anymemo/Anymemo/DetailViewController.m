@@ -10,7 +10,9 @@
 #import "DataManager.h"
 #import "AnswerView.h"
 #import "ConfigManager.h"
+#import "NoteViewController.h"
 @interface DetailViewController ()
+@property (nonatomic,strong)Quetion* currentQuestion;
 @property (nonatomic,strong)AnswerView* currentAnswerview;
 @end
 
@@ -32,18 +34,24 @@
         [self.navigationController popViewControllerAnimated:YES];
     });
 }
+- (void)setupAnswerViewStyle {
+    [self.currentAnswerview setCardColor:[[ConfigManager sharedManager] getCardBackgourndColor]];
+    [self.currentAnswerview setFontColor:[[ConfigManager sharedManager] getCardFontColor]];
+    [self.currentAnswerview setFont:[[ConfigManager sharedManager] getCardFont]];
+}
+
 -(void)goNextAnserView{
     DetailViewController* me=self;
     AnswerView* oldview=me.currentAnswerview;
     me.currentAnswerview=[[AnswerView alloc] initWithFrame:CGRectMake(10+320, 74, me.view.frame.size.width-20, me.view.frame.size.height-134)];
-    [self.currentAnswerview setCardColor:[[ConfigManager sharedManager] getCardBackgourndColor]];
+    [self setupAnswerViewStyle];
     NSLog(@"%@",[[ConfigManager sharedManager] getCardBackgourndColor]);
-    Quetion* question=[[DataManager shareManager] getRandomQuestion];
-    if (question==nil) {
+    self.currentQuestion=[[DataManager shareManager] getRandomQuestion];
+    if (self.currentQuestion==nil) {
         [self alertComplete];
         return;
     }
-    [me.currentAnswerview setInfoWithQuestion:question];
+    [me.currentAnswerview setInfoWithQuestion:self.currentQuestion];
     me.currentAnswerview.onRememberCb=^(Quetion *q){
         [self onRemember:q];
     };
@@ -68,13 +76,13 @@
     self.title=@"记忆";
     [[DataManager shareManager] openMemo:self.memo];
     self.currentAnswerview=[[AnswerView alloc] initWithFrame:CGRectMake(10, 74, self.view.frame.size.width-20, self.view.frame.size.height-134)];
-    [self.currentAnswerview setCardColor:[[ConfigManager sharedManager] getCardBackgourndColor]];
-    Quetion* question=[[DataManager shareManager] getRandomQuestion];
-    if (question==nil) {
+    [self setupAnswerViewStyle];
+    self.currentQuestion=[[DataManager shareManager] getRandomQuestion];
+    if (self.currentQuestion==nil) {
         [self alertComplete];
         return;
     }
-    [self.currentAnswerview setInfoWithQuestion:question];
+    [self.currentAnswerview setInfoWithQuestion:self.currentQuestion];
     self.currentAnswerview.onRememberCb=^(Quetion *q){
         [me onRemember:q];
     };
@@ -82,9 +90,21 @@
     self.currentAnswerview.onNextCb=^{
         [me goNextAnserView];
     };
+    if ([[ConfigManager sharedManager] isDisplayNote]) {
+        self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc] initWithTitle:@"笔记" style:UIBarButtonItemStylePlain target:self action:@selector(onNoteBtnClicked)];
+    }
+    
     // Do any additional setup after loading the view.
 }
-
+-(void)onNoteBtnClicked{
+    NoteViewController *ntv=[self.storyboard instantiateViewControllerWithIdentifier:@"NoteViewController"];
+    ntv.memo=self.memo;
+    ntv.question=self.currentQuestion;
+    ntv.onComplete=^{
+        [self dismissViewControllerAnimated:YES completion:nil];
+    };
+    [self presentViewController:ntv animated:YES completion:nil];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

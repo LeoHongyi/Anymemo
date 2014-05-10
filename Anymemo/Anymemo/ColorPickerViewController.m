@@ -6,15 +6,15 @@
 //  Copyright (c) 2014年 skysent. All rights reserved.
 //
 
-#import "CardBackgroundPickerViewController.h"
+#import "ColorPickerViewController.h"
 #import "Palette.h"
 #import "ConfigManager.h"
-@interface CardBackgroundPickerViewController ()<PaletteDelegate>
+@interface ColorPickerViewController ()<PaletteDelegate>
 @property (nonatomic,strong)Palette* colorPanel;
 @property (nonatomic,strong)UIView* currentColor;
 @end
 
-@implementation CardBackgroundPickerViewController
+@implementation ColorPickerViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,7 +38,7 @@
     self.colorPanel.paletteDelegate=self;
     
     self.currentColor=[[UIView alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2-20, self.colorPanel.frame.origin.y+self.colorPanel.frame.size.height+10, 40, 20)];
-    self.currentColor.backgroundColor=[[ConfigManager sharedManager] getCardBackgourndColor];
+    self.currentColor.backgroundColor=self.startColor;
     [self.view addSubview:self.currentColor];
 
     // Do any additional setup after loading the view.

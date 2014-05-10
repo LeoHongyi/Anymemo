@@ -6,14 +6,14 @@
 //  Copyright (c) 2013年 crazyit.org. All rights reserved.
 //
 
-#import "webViewController.h"
+#import "WebViewController.h"
 
-@interface UIViewController ()
-
+@interface WebViewController ()
+@property (nonatomic,strong)UIActivityIndicatorView* activityIndicator;
 @end
 
-@implementation webViewController
-UIActivityIndicatorView* activityIndicator;
+@implementation WebViewController
+
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
@@ -22,30 +22,31 @@ UIActivityIndicatorView* activityIndicator;
 	
 	self.webView.delegate = self;
 	
-	activityIndicator = [[UIActivityIndicatorView alloc]
+	self.activityIndicator = [[UIActivityIndicatorView alloc]
                          initWithFrame : CGRectMake(0.0f, 0.0f, 32.0f, 32.0f)];
 	
-	[activityIndicator setCenter: self.view.center] ;
-	activityIndicator.activityIndicatorViewStyle
+	[self.activityIndicator setCenter: self.view.center] ;
+	self.activityIndicator.activityIndicatorViewStyle
     = UIActivityIndicatorViewStyleWhiteLarge;
-	[self.view addSubview : activityIndicator];
+	[self.view addSubview : self.activityIndicator];
 	
-	activityIndicator.hidden = YES;
+	self.activityIndicator.hidden = YES;
 	[self goClicked:nil];
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
 	
-	activityIndicator.hidden = NO;	[activityIndicator startAnimating] ;
+	self.activityIndicator.hidden = NO;
+    [self.activityIndicator startAnimating] ;
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
 	
-	[activityIndicator stopAnimating];
+	[self.activityIndicator stopAnimating];
 	
-	activityIndicator.hidden = YES;
+	self.activityIndicator.hidden = YES;
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error

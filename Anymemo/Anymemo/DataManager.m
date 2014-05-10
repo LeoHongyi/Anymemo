@@ -36,6 +36,27 @@
     }
     [self saveRecentItemsToFile];
 }
+-(NSNumber *)getOkCount{
+    NSString* sql=@"select count(*) from dict_ok";
+    FMResultSet* rs=[self.db executeQuery:sql];
+    if ([rs next]) {
+        return @([rs intForColumnIndex:0]);
+    }
+    return @(0);
+}
+-(NSNumber *)getTotalCount{
+    NSString* sql=@"select count(*) from dict_tbl";
+    FMResultSet* rs=[self.db executeQuery:sql];
+    if ([rs next]) {
+        return @([rs intForColumnIndex:0]);
+    }
+    return @(0);
+}
+-(void)updateQuestion:(Quetion *)q{
+    NSString* updateSql=[NSString stringWithFormat:@"update dict_tbl set note='%@' where _id=%@",q.note,q.qid];
+
+    [self.db executeUpdate:updateSql];
+}
 -(void)saveRecentItemsToFile{
     NSData* recentItemsdata=[NSJSONSerialization dataWithJSONObject:self.recentItems options:NSJSONWritingPrettyPrinted error:nil];
     if (recentItemsdata) {

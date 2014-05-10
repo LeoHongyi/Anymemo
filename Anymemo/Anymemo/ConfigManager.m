@@ -52,14 +52,17 @@
 }
 -(UIFont *)getCardFont{
     NSNumber* cardFontSize= [[NSUserDefaults standardUserDefaults] objectForKey:@"cardFontSize"];
+    NSString* family=[[NSUserDefaults standardUserDefaults] objectForKey:@"cardFontFamily"];
     if (cardFontSize==nil) {
         cardFontSize=@(15);
+        family=@"";
     }
-    return [UIFont systemFontOfSize:[cardFontSize floatValue]];
+    return [UIFont fontWithName:family size:[cardFontSize floatValue]];
 }
 -(void)setCardFont:(UIFont *)f{
     NSNumber* cardFontSize=@([f pointSize]);
     [[NSUserDefaults standardUserDefaults] setObject:cardFontSize forKey:@"cardFontSize"];
+    [[NSUserDefaults standardUserDefaults] setObject:f.familyName forKey:@"cardFontFamily"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 -(BOOL)isDisplayNote{

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CardBackgroundPickerViewController : UIViewController
+@interface ColorPickerViewController : UIViewController
+@property (nonatomic,strong)UIColor *startColor;
 @property (nonatomic,strong) void(^onColorChangeCb)(UIColor *c);
 @end

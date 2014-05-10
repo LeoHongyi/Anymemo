@@ -10,7 +10,7 @@
 		04255328191BB362001C3AB7 /* SettingVIewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04255327191BB362001C3AB7 /* SettingVIewController.m */; };
 		0425532B191BB387001C3AB7 /* ConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0425532A191BB387001C3AB7 /* ConfigManager.m */; };
 		0425532E191BBAA3001C3AB7 /* Palette.m in Sources */ = {isa = PBXBuildFile; fileRef = 0425532D191BBAA3001C3AB7 /* Palette.m */; };
-		04255331191BBC0F001C3AB7 /* CardBackgroundPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04255330191BBC0F001C3AB7 /* CardBackgroundPickerViewController.m */; };
+		04255331191BBC0F001C3AB7 /* ColorPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04255330191BBC0F001C3AB7 /* ColorPickerViewController.m */; };
 		04255334191BBDB3001C3AB7 /* 全色.png in Resources */ = {isa = PBXBuildFile; fileRef = 04255332191BBDB3001C3AB7 /* 全色.png */; };
 		04255335191BBDB3001C3AB7 /* 全色@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04255333191BBDB3001C3AB7 /* 全色@2x.png */; };
 		04589CC619094CD200EB85F3 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 04589CB419094CD200EB85F3 /* AFHTTPRequestOperation.m */; };
@@ -28,6 +28,10 @@
 		04589CFA1909596B00EB85F3 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 04589CF91909596B00EB85F3 /* MBProgressHUD.m */; };
 		046EBABC190BF45C005A1F81 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 046EBABB190BF45C005A1F81 /* DataManager.m */; };
 		046EBABF190BFB27005A1F81 /* OpenTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046EBABE190BFB27005A1F81 /* OpenTableViewController.m */; };
+		047D93F5191E53B9003A69D7 /* font_color.png in Resources */ = {isa = PBXBuildFile; fileRef = 047D93F3191E53B9003A69D7 /* font_color.png */; };
+		047D93F6191E53B9003A69D7 /* font_color@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 047D93F4191E53B9003A69D7 /* font_color@2x.png */; };
+		047D93F9191E56DD003A69D7 /* FontSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047D93F8191E56DD003A69D7 /* FontSelectorViewController.m */; };
+		047D93FC191E6088003A69D7 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047D93FB191E6088003A69D7 /* NoteViewController.m */; };
 		0490794A19056444004874C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490794919056444004874C8 /* Foundation.framework */; };
 		0490794C19056444004874C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490794B19056444004874C8 /* CoreGraphics.framework */; };
 		0490794E19056444004874C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490794D19056444004874C8 /* UIKit.framework */; };
@@ -73,7 +77,7 @@
 		04F0A585190FDDF20068C9D5 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F0A584190FDDF20068C9D5 /* libsqlite3.dylib */; };
 		04F0A588190FE3160068C9D5 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F0A587190FE3160068C9D5 /* DetailViewController.m */; };
 		04F0A58E190FECD20068C9D5 /* Quetion.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F0A58D190FECD20068C9D5 /* Quetion.m */; };
-		180AD0D1191BDA480008A37E /* webViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180AD0D0191BDA480008A37E /* webViewController.m */; };
+		180AD0D1191BDA480008A37E /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180AD0D0191BDA480008A37E /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,8 +97,8 @@
 		0425532A191BB387001C3AB7 /* ConfigManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigManager.m; sourceTree = "<group>"; };
 		0425532C191BBAA3001C3AB7 /* Palette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Palette.h; sourceTree = "<group>"; };
 		0425532D191BBAA3001C3AB7 /* Palette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Palette.m; sourceTree = "<group>"; };
-		0425532F191BBC0F001C3AB7 /* CardBackgroundPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardBackgroundPickerViewController.h; sourceTree = "<group>"; };
-		04255330191BBC0F001C3AB7 /* CardBackgroundPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardBackgroundPickerViewController.m; sourceTree = "<group>"; };
+		0425532F191BBC0F001C3AB7 /* ColorPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorPickerViewController.h; sourceTree = "<group>"; };
+		04255330191BBC0F001C3AB7 /* ColorPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorPickerViewController.m; sourceTree = "<group>"; };
 		04255332191BBDB3001C3AB7 /* 全色.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "全色.png"; sourceTree = "<group>"; };
 		04255333191BBDB3001C3AB7 /* 全色@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "全色@2x.png"; sourceTree = "<group>"; };
 		04589CB319094CD200EB85F3 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -126,6 +130,12 @@
 		046EBABB190BF45C005A1F81 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		046EBABD190BFB27005A1F81 /* OpenTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenTableViewController.h; sourceTree = "<group>"; };
 		046EBABE190BFB27005A1F81 /* OpenTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenTableViewController.m; sourceTree = "<group>"; };
+		047D93F3191E53B9003A69D7 /* font_color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = font_color.png; sourceTree = "<group>"; };
+		047D93F4191E53B9003A69D7 /* font_color@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "font_color@2x.png"; sourceTree = "<group>"; };
+		047D93F7191E56DD003A69D7 /* FontSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontSelectorViewController.h; sourceTree = "<group>"; };
+		047D93F8191E56DD003A69D7 /* FontSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontSelectorViewController.m; sourceTree = "<group>"; };
+		047D93FA191E6088003A69D7 /* NoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteViewController.h; sourceTree = "<group>"; };
+		047D93FB191E6088003A69D7 /* NoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteViewController.m; sourceTree = "<group>"; };
 		0490794619056444004874C8 /* Anymemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anymemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0490794919056444004874C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0490794B19056444004874C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -188,8 +198,8 @@
 		04F0A587190FE3160068C9D5 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		04F0A58C190FECD20068C9D5 /* Quetion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quetion.h; sourceTree = "<group>"; };
 		04F0A58D190FECD20068C9D5 /* Quetion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quetion.m; sourceTree = "<group>"; };
-		180AD0CF191BDA480008A37E /* webViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = webViewController.h; sourceTree = "<group>"; };
-		180AD0D0191BDA480008A37E /* webViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = webViewController.m; sourceTree = "<group>"; };
+		180AD0CF191BDA480008A37E /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		180AD0D0191BDA480008A37E /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,8 +259,8 @@
 				0490799719056ABC004874C8 /* DownloadDetailTableViewController.h */,
 				0490799819056ABC004874C8 /* DownloadDetailTableViewController.m */,
 				0490798F19056730004874C8 /* DownloadTableViewController.h */,
-				180AD0CF191BDA480008A37E /* webViewController.h */,
-				180AD0D0191BDA480008A37E /* webViewController.m */,
+				180AD0CF191BDA480008A37E /* WebViewController.h */,
+				180AD0D0191BDA480008A37E /* WebViewController.m */,
 				0490799019056730004874C8 /* DownloadTableViewController.m */,
 				046EBABD190BFB27005A1F81 /* OpenTableViewController.h */,
 				046EBABE190BFB27005A1F81 /* OpenTableViewController.m */,
@@ -262,8 +272,12 @@
 				04DAF4D3191A73650083C0BB /* RecentViewController.m */,
 				04255326191BB362001C3AB7 /* SettingVIewController.h */,
 				04255327191BB362001C3AB7 /* SettingVIewController.m */,
-				0425532F191BBC0F001C3AB7 /* CardBackgroundPickerViewController.h */,
-				04255330191BBC0F001C3AB7 /* CardBackgroundPickerViewController.m */,
+				0425532F191BBC0F001C3AB7 /* ColorPickerViewController.h */,
+				04255330191BBC0F001C3AB7 /* ColorPickerViewController.m */,
+				047D93F7191E56DD003A69D7 /* FontSelectorViewController.h */,
+				047D93F8191E56DD003A69D7 /* FontSelectorViewController.m */,
+				047D93FA191E6088003A69D7 /* NoteViewController.h */,
+				047D93FB191E6088003A69D7 /* NoteViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -363,6 +377,8 @@
 			isa = PBXGroup;
 			children = (
 				04255332191BBDB3001C3AB7 /* 全色.png */,
+				047D93F3191E53B9003A69D7 /* font_color.png */,
+				047D93F4191E53B9003A69D7 /* font_color@2x.png */,
 				04255333191BBDB3001C3AB7 /* 全色@2x.png */,
 				04DAF4D5191A7AE30083C0BB /* color.png */,
 				04DAF4D6191A7AE30083C0BB /* color@2x.png */,
@@ -503,11 +519,13 @@
 				0490798719056691004874C8 /* download.png in Resources */,
 				0490798D19056691004874C8 /* settings.png in Resources */,
 				0490798919056691004874C8 /* open.png in Resources */,
+				047D93F5191E53B9003A69D7 /* font_color.png in Resources */,
 				04DAF4DF191A7AE40083C0BB /* color.png in Resources */,
 				0490798B19056691004874C8 /* resent.png in Resources */,
 				0490798A19056691004874C8 /* open@2x.png in Resources */,
 				04DAF4E8191A7AE40083C0BB /* note@2x.png in Resources */,
 				04DAF4E7191A7AE40083C0BB /* note.png in Resources */,
+				047D93F6191E53B9003A69D7 /* font_color@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,24 +555,26 @@
 				04255328191BB362001C3AB7 /* SettingVIewController.m in Sources */,
 				046EBABC190BF45C005A1F81 /* DataManager.m in Sources */,
 				04589CCC19094CD200EB85F3 /* AFURLRequestSerialization.m in Sources */,
-				180AD0D1191BDA480008A37E /* webViewController.m in Sources */,
+				180AD0D1191BDA480008A37E /* WebViewController.m in Sources */,
 				0490795A19056444004874C8 /* AppDelegate.m in Sources */,
 				04589CCD19094CD200EB85F3 /* AFURLResponseSerialization.m in Sources */,
 				04907994190567D7004874C8 /* DownloadCell.m in Sources */,
 				04F0A588190FE3160068C9D5 /* DetailViewController.m in Sources */,
 				0490795619056444004874C8 /* main.m in Sources */,
 				04589CC719094CD200EB85F3 /* AFHTTPRequestOperationManager.m in Sources */,
+				047D93FC191E6088003A69D7 /* NoteViewController.m in Sources */,
 				04589CFA1909596B00EB85F3 /* MBProgressHUD.m in Sources */,
 				04589CCA19094CD200EB85F3 /* AFSecurityPolicy.m in Sources */,
 				0490799919056ABC004874C8 /* DownloadDetailTableViewController.m in Sources */,
 				0490799119056730004874C8 /* DownloadTableViewController.m in Sources */,
-				04255331191BBC0F001C3AB7 /* CardBackgroundPickerViewController.m in Sources */,
+				04255331191BBC0F001C3AB7 /* ColorPickerViewController.m in Sources */,
 				0425532E191BBAA3001C3AB7 /* Palette.m in Sources */,
 				04F0A583190FDDC70068C9D5 /* FMResultSet.m in Sources */,
 				04DAF4D4191A73650083C0BB /* RecentViewController.m in Sources */,
 				04589CC819094CD200EB85F3 /* AFHTTPSessionManager.m in Sources */,
 				04589CF61909529000EB85F3 /* DownloadManager.m in Sources */,
 				04F0A582190FDDC70068C9D5 /* FMDatabaseQueue.m in Sources */,
+				047D93F9191E56DD003A69D7 /* FontSelectorViewController.m in Sources */,
 				04F0A58E190FECD20068C9D5 /* Quetion.m in Sources */,
 				046EBABF190BFB27005A1F81 /* OpenTableViewController.m in Sources */,
 				04F0A580190FDDC70068C9D5 /* FMDatabaseAdditions.m in Sources */,
