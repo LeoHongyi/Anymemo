@@ -101,9 +101,19 @@
     ntv.memo=self.memo;
     ntv.question=self.currentQuestion;
     ntv.onComplete=^{
-        [self dismissViewControllerAnimated:YES completion:nil];
+        //[self dismissViewControllerAnimated:YES completion:nil];
+        [self.navigationController popViewControllerAnimated:YES];
     };
-    [self presentViewController:ntv animated:YES completion:nil];
+    [self.navigationController pushViewController:ntv animated:YES];
+    //[self presentViewController:ntv animated:YES completion:nil];
+//    UINavigationController* nav=[self.storyboard instantiateViewControllerWithIdentifier:@"NoteNav"];
+//    NoteViewController *ntv=(NoteViewController *)nav.topViewController;
+//        ntv.memo=self.memo;
+//        ntv.question=self.currentQuestion;
+//        ntv.onComplete=^{
+//            [self dismissViewControllerAnimated:YES completion:nil];
+//        };
+//    [self presentViewController:nav animated:YES completion:nil];
 }
 - (void)didReceiveMemoryWarning
 {

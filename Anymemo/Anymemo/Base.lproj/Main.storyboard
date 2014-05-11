@@ -577,7 +577,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r1o-gG-K6X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1300" y="996"/>
+            <point key="canvasLocation" x="1334" y="1245"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="v1y-U3-ZWf">
+            <objects>
+                <navigationController restorationIdentifier="NoteNav" storyboardIdentifier="NoteNav" definesPresentationContext="YES" id="5UF-na-Kki" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wfr-2g-ygh">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PeJ-g7-LvH" kind="relationship" relationship="rootViewController" id="eqD-j4-MqT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z80-6M-aO2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1812" y="1245"/>
         </scene>
         <!--Note View Controller-->
         <scene sceneID="bfu-wk-rrx">
@@ -588,36 +603,30 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="请输入笔记." id="ucs-HP-bRe">
-                                <rect key="frame" x="0.0" y="66" width="320" height="225"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="291"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="n4Y-9G-Kd9">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="X0O-zc-5oO"/>
-                                    <barButtonItem title="完成" id="sTg-3t-UJy">
-                                        <connections>
-                                            <action selector="onCompleteBtnClicked:" destination="PeJ-g7-LvH" id="RS1-4Q-32l"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="EFi-ew-Acy">
+                        <barButtonItem key="rightBarButtonItem" title="完成" id="UHF-wl-AYB">
+                            <connections>
+                                <action selector="onCompleteBtnClicked:" destination="PeJ-g7-LvH" id="8eP-sI-Gkg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="noteTextView" destination="ucs-HP-bRe" id="ARj-dW-0Fl"/>
-                        <outlet property="toolbar" destination="n4Y-9G-Kd9" id="qMw-hw-cvF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nch-Kq-K5f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1496" y="1133"/>
+            <point key="canvasLocation" x="2320" y="1245"/>
         </scene>
         <!--Navigation Controller - 设置-->
         <scene sceneID="E1a-Da-bkm">

@@ -32,6 +32,10 @@
 		047D93F6191E53B9003A69D7 /* font_color@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 047D93F4191E53B9003A69D7 /* font_color@2x.png */; };
 		047D93F9191E56DD003A69D7 /* FontSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047D93F8191E56DD003A69D7 /* FontSelectorViewController.m */; };
 		047D93FC191E6088003A69D7 /* NoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047D93FB191E6088003A69D7 /* NoteViewController.m */; };
+		047D9403191FB505003A69D7 /* NKOColorPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 047D9401191FB505003A69D7 /* NKOColorPickerView.m */; };
+		047D9408191FB658003A69D7 /* nko_brightness_guide.png in Resources */ = {isa = PBXBuildFile; fileRef = 047D9405191FB658003A69D7 /* nko_brightness_guide.png */; };
+		047D9409191FB658003A69D7 /* nko_brightness_guide@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 047D9406191FB658003A69D7 /* nko_brightness_guide@2x.png */; };
+		047D940A191FB658003A69D7 /* nko_colormap.png in Resources */ = {isa = PBXBuildFile; fileRef = 047D9407191FB658003A69D7 /* nko_colormap.png */; };
 		0490794A19056444004874C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490794919056444004874C8 /* Foundation.framework */; };
 		0490794C19056444004874C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490794B19056444004874C8 /* CoreGraphics.framework */; };
 		0490794E19056444004874C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0490794D19056444004874C8 /* UIKit.framework */; };
@@ -136,6 +140,11 @@
 		047D93F8191E56DD003A69D7 /* FontSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontSelectorViewController.m; sourceTree = "<group>"; };
 		047D93FA191E6088003A69D7 /* NoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoteViewController.h; sourceTree = "<group>"; };
 		047D93FB191E6088003A69D7 /* NoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoteViewController.m; sourceTree = "<group>"; };
+		047D9400191FB505003A69D7 /* NKOColorPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NKOColorPickerView.h; sourceTree = "<group>"; };
+		047D9401191FB505003A69D7 /* NKOColorPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NKOColorPickerView.m; sourceTree = "<group>"; };
+		047D9405191FB658003A69D7 /* nko_brightness_guide.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nko_brightness_guide.png; sourceTree = "<group>"; };
+		047D9406191FB658003A69D7 /* nko_brightness_guide@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nko_brightness_guide@2x.png"; sourceTree = "<group>"; };
+		047D9407191FB658003A69D7 /* nko_colormap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nko_colormap.png; sourceTree = "<group>"; };
 		0490794619056444004874C8 /* Anymemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anymemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0490794919056444004874C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0490794B19056444004874C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -282,6 +291,16 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
+		047D9404191FB658003A69D7 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				047D9405191FB658003A69D7 /* nko_brightness_guide.png */,
+				047D9406191FB658003A69D7 /* nko_brightness_guide@2x.png */,
+				047D9407191FB658003A69D7 /* nko_colormap.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		0490793D19056444004874C8 = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +335,8 @@
 		0490794F19056444004874C8 /* Anymemo */ = {
 			isa = PBXGroup;
 			children = (
+				047D9400191FB505003A69D7 /* NKOColorPickerView.h */,
+				047D9401191FB505003A69D7 /* NKOColorPickerView.m */,
 				04F0A573190FDDC70068C9D5 /* fmdb */,
 				04589CF81909596B00EB85F3 /* MBProgressHUD.h */,
 				04589CF91909596B00EB85F3 /* MBProgressHUD.m */,
@@ -376,6 +397,7 @@
 		0490797E19056691004874C8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				047D9404191FB658003A69D7 /* Assets */,
 				04255332191BBDB3001C3AB7 /* 全色.png */,
 				047D93F3191E53B9003A69D7 /* font_color.png */,
 				047D93F4191E53B9003A69D7 /* font_color@2x.png */,
@@ -512,6 +534,7 @@
 				0490796219056445004874C8 /* Images.xcassets in Resources */,
 				0490795419056444004874C8 /* InfoPlist.strings in Resources */,
 				04589CF2190950A500EB85F3 /* download_btn.png in Resources */,
+				047D9408191FB658003A69D7 /* nko_brightness_guide.png in Resources */,
 				04DAF4E0191A7AE40083C0BB /* color@2x.png in Resources */,
 				0490795D19056445004874C8 /* Main.storyboard in Resources */,
 				04255335191BBDB3001C3AB7 /* 全色@2x.png in Resources */,
@@ -524,8 +547,10 @@
 				0490798B19056691004874C8 /* resent.png in Resources */,
 				0490798A19056691004874C8 /* open@2x.png in Resources */,
 				04DAF4E8191A7AE40083C0BB /* note@2x.png in Resources */,
+				047D9409191FB658003A69D7 /* nko_brightness_guide@2x.png in Resources */,
 				04DAF4E7191A7AE40083C0BB /* note.png in Resources */,
 				047D93F6191E53B9003A69D7 /* font_color@2x.png in Resources */,
+				047D940A191FB658003A69D7 /* nko_colormap.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,6 +597,7 @@
 				04F0A583190FDDC70068C9D5 /* FMResultSet.m in Sources */,
 				04DAF4D4191A73650083C0BB /* RecentViewController.m in Sources */,
 				04589CC819094CD200EB85F3 /* AFHTTPSessionManager.m in Sources */,
+				047D9403191FB505003A69D7 /* NKOColorPickerView.m in Sources */,
 				04589CF61909529000EB85F3 /* DownloadManager.m in Sources */,
 				04F0A582190FDDC70068C9D5 /* FMDatabaseQueue.m in Sources */,
 				047D93F9191E56DD003A69D7 /* FontSelectorViewController.m in Sources */,
