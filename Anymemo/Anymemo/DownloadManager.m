@@ -2,7 +2,7 @@
 //  DownloadManager.m
 //  Anymemo
 //
-//  Created by xxxx on 14-4-24.
+//  Created by Leo on 14-4-24.
 //  Copyright (c) 2014年 skysent. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  ConfigManager.m
 //  Anymemo
 //
-//  Created by xxxx on 14-5-8.
+//  Created by Leo on 14-5-8.
 //  Copyright (c) 2014年 skysent. All rights reserved.
 //
 
@@ -12,7 +12,7 @@
 @implementation ConfigManager
 //r:g:b
 -(NSString *)colorToString:(UIColor *)c{
-    float r,g,b,a;
+    CGFloat r,g,b,a;
     [c getRed:&r green:&g blue:&b alpha:&a];
     return [NSString stringWithFormat:@"%f:%f:%f",r,g,b];
 }

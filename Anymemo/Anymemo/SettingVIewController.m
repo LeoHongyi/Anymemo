@@ -2,7 +2,7 @@
 //  SettingVIewController.m
 //  Anymemo
 //
-//  Created by xxxx on 14-5-8.
+//  Created by Leo on 14-5-8.
 //  Copyright (c) 2014年 skysent. All rights reserved.
 //
 

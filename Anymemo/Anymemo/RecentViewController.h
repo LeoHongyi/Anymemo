@@ -2,7 +2,7 @@
 //  RecentViewController.h
 //  Anymemo
 //
-//  Created by xxxx on 14-5-7.
+//  Created by Leo on 14-5-7.
 //  Copyright (c) 2014年 skysent. All rights reserved.
 //
 
